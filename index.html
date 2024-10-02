@@ -76,10 +76,15 @@
 
 <body class="bg-gray-100 font-sans max-w-full">
     <!-- Navigation Bar -->
-    <nav class="shadow-md w-fully" style="background: rgba(0, 46, 81, 0.7);color:#f3f4f6;">
-        <div class="container mx-auto flex justify-between items-center p-4">
-            <div class="flex items-center">
-                <h1 class="text-2xl font-bold">IT Services</h1>
+    <nav class="shadow-md w-fully bg-gray-400 fixed z-50">
+            <div class="container mx-auto flex justify-between items-center"><div class="flex items-center">
+                <a href="/" aria-label="Home">
+                    <img 
+                        src="./images/WHITE_B-removebg-preview.png" 
+                        alt="Company Logo" 
+                        class="h-16 w-auto" 
+                    />
+                </a>
             </div>
             <div class="hidden md:flex space-x-8">
                 <a href="#services" class="hover:text-yellow-500 transition duration-300">Services</a>
@@ -110,16 +115,16 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" style="background: rgba(0, 46, 81, 0.3);color:#f3f4f6" class="hidden w-fully md:hidden bg-white shadow-lg transition-all duration-300">
             <div class="flex flex-col p-4">
-                <a href="#services" class="py-2 hover:bg-gray-100 transition duration-300">Services</a>
-                <a href="#about-me" class="py-2 hover:bg-gray-100 transition duration-300">About Us</a>
-                <a href="#contact" class="py-2 hover:bg-gray-100 transition duration-300">Contact</a>
+                <a href="#services" class="py-2 hover:text-yellow-500 transition duration-300">Services</a>
+                <a href="#about-me" class="py-2 hover:text-yellow-500 transition duration-300">About Us</a>
+                <a href="#contact" class="py-2 hover:text-yellow-500 transition duration-300">Contact</a>
                 <div class="relative group">
-                    <button class="py-2 hover:bg-gray-100 transition duration-300">More</button>
+                    <button class="py-2 hover:text-yellow-500 transition duration-300">More</button>
                     <div class="absolute left-0 hidden mt-2 w-40 bg-white shadow-lg rounded-lg group-hover:block">
                         <a href="#blog"
-                            class="block px-4 py-2 hover:bg-gray-100 transition duration-300">Blog</a>
+                            class="block px-4 py-2 hover:text-yellow-500 transition duration-300">Blog</a>
                         <a href="#careers"
-                            class="block px-4 py-2 hover:bg-gray-100 transition duration-300">Careers</a>
+                            class="block px-4 py-2 hover:text-yellow-500 transition duration-300">Careers</a>
                     </div>
                 </div>
             </div>
@@ -135,6 +140,7 @@
             mobileMenu.classList.toggle('hidden');
         });
     </script>
+
 
     <!-- Hero Section -->
     <section class="hero flex items-center justify-center text-center relative">
@@ -629,7 +635,6 @@
         </div>
 
         <!-- Wave Animation -->
-        <div id="wave"></div>
 
         <!-- Bottom Bar -->
         <div class="bg-gray-800 py-4 mt-10">
@@ -651,7 +656,7 @@
 
 
 <!-- Back to Top Button -->
-<a href="javascript:void(0);" id="back-to-top" class="hidden fixed z-50 bottom-10 right-10 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110">
+<a href="javascript:void(0);" id="back-to-top" class="hidden fixed z-50 bottom-10 left-10 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
     </svg>
