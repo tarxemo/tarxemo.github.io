@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar with Smooth Animations</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome CDN -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Animate.css CDN for smooth animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- Hover.css CDN for hover animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" />
+
+  <!-- Custom Tailwind CSS Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0D7C66',
+            secondary: '#41B3A2',
+          },
+          fontFamily: {
+            sans: ['Nunito', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Dropdown and transition effects */
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .dropdown-menu {
+      transition: all 0.3s ease-in-out;
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    /* Smooth transition for nested dropdown */
+    .nested-dropdown:hover .nested-menu {
+      display: block;
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .nested-menu {
+      transition: all 0.3s ease-in-out;
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+  </style>
+
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <header class="bg-primary shadow-md fixed w-full z-50 top-0">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      
+      <!-- Logo -->
+      <div class="logo text-2xl font-bold text-white">
+        <a href="#" class="hover:text-secondary"><i class="fas fa-laptop-code"></i> YourLogo</a>
+      </div>
+      
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex space-x-6 items-center">
+        <a href="#home" class="text-white hover:text-secondary transition-all duration-300">Home</a>
+
+        <!-- Dropdown with Nested Dropdown -->
+        <div class="dropdown relative">
+          <a href="#" class="text-white flex items-center hover:text-secondary transition-all duration-300">
+            Services <i class="fas fa-angle-down ml-1"></i>
+          </a>
+          
+          <!-- Dropdown Menu -->
+          <div class="dropdown-menu absolute hidden bg-white shadow-lg rounded-lg p-4 space-y-2 animate__animated animate__fadeInDown">
+            <a href="#webdev" class="block text-primary hover:text-secondary">
+              <i class="fas fa-code"></i> Web Development
+            </a>
+            <a href="#mobiledev" class="block text-primary hover:text-secondary">
+              <i class="fas fa-mobile-alt"></i> Mobile Development
+            </a>
+            
+            <!-- Nested Dropdown -->
+            <div class="nested-dropdown relative">
+              <a href="#" class="block text-primary hover:text-secondary flex items-center">
+                More Services <i class="fas fa-angle-right ml-1"></i>
+              </a>
+              
+              <!-- Nested Dropdown Menu -->
+              <div class="nested-menu absolute left-full top-0 hidden bg-white shadow-lg rounded-lg p-4 space-y-2">
+                <a href="#cloud" class="block text-primary hover:text-secondary">
+                  <i class="fas fa-cloud"></i> Cloud Services
+                </a>
+                <a href="#consulting" class="block text-primary hover:text-secondary">
+                  <i class="fas fa-comments"></i> IT Consulting
+                </a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        <a href="#portfolio" class="text-white hover:text-secondary transition-all duration-300">Portfolio</a>
+        <a href="#contact" class="text-white hover:text-secondary transition-all duration-300">Contact</a>
+      </nav>
+      
+      <!-- CTA Buttons -->
+      <div class="hidden md:flex space-x-4">
+        <a href="#login" class="bg-transparent border border-secondary text-white px-4 py-2 rounded-md hover:bg-secondary hover:text-primary transition-all">Login</a>
+        <a href="#signup" class="bg-secondary text-primary px-4 py-2 rounded-md hover:bg-primary hover:text-white transition-all">Sign Up</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden flex items-center">
+        <div id="burger" class="burger-menu cursor-pointer flex flex-col space-y-2">
+          <div class="line1 w-8 h-1 bg-white"></div>
+          <div class="line2 w-8 h-1 bg-white"></div>
+          <div class="line3 w-8 h-1 bg-white"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-nav" class="mobile-nav fixed top-0 right-0 w-2/3 h-full bg-secondary text-primary flex flex-col items-center justify-center space-y-6 md:hidden animate__animated animate__slideInRight">
+      <a href="#home" class="text-primary text-xl hover:text-white">Home</a>
+      <a href="#services" class="text-primary text-xl hover:text-white">Services</a>
+      <a href="#portfolio" class="text-primary text-xl hover:text-white">Portfolio</a>
+      <a href="#contact" class="text-primary text-xl hover:text-white">Contact</a>
+      <a href="#login" class="bg-transparent border border-primary text-primary px-4 py-2 rounded-md hover:bg-primary hover:text-white transition-all">Login</a>
+      <a href="#signup" class="bg-primary text-white px-4 py-2 rounded-md hover:bg-secondary transition-all">Sign Up</a>
+    </nav>
+
+  </header>
+
+  <!-- Page Content -->
+  <main class="mt-20">
+    <section id="home" class="h-screen bg-gray-200 flex items-center justify-center">
+      <h1 class="text-4xl font-bold text-primary">Welcome to Your Website</h1>
+    </section>
+  </main>
+
+  <!-- JavaScript for Mobile Menu Toggle -->
+  <script>
+    const burger = document.getElementById('burger');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('active');
+      mobileNav.classList.toggle('animate__slideInRight');
+    });
+  </script>
+
+</body>
+</html>

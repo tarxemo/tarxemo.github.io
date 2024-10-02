@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smooth App with Sidebar Fix</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="bg-primary text-white py-4 fixed w-full z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Your Company</h1>
+      <!-- Large Screen Navigation -->
+      <nav class="hidden lg:flex space-x-8">
+        <a href="#services" class="hover:text-secondary">Services</a>
+        <a href="#portfolio" class="hover:text-secondary">Portfolio</a>
+        <a href="#contact" class="hover:text-secondary">Contact</a>
+      </nav>
+      <!-- Burger for Small Screens -->
+      <div id="burger" class="lg:hidden cursor-pointer">
+        <i class="fas fa-bars text-2xl"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Sidebar -->
+  <div id="mobile-nav" class="hidden fixed right-0 top-0 w-64 h-full bg-secondary text-white z-50 transition-transform transform translate-x-full lg:hidden">
+    <div class="flex justify-end p-4">
+      <button id="close-sidebar" class="text-white">
+        <i class="fas fa-times text-2xl"></i>
+      </button>
+    </div>
+    <nav class="flex flex-col items-start space-y-4 p-4">
+      <a href="#services" class="hover:text-primary">Services</a>
+      <a href="#portfolio" class="hover:text-primary">Portfolio</a>
+      <a href="#contact" class="hover:text-primary">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="h-screen flex items-center justify-center bg-hero bg-cover bg-center text-white">
+    <div class="text-center" data-aos="fade-up">
+      <h1 class="text-5xl font-bold">Take Your Business to New Heights</h1>
+      <p class="mt-4 text-lg">We offer cutting-edge solutions to elevate your brand.</p>
+      <a href="#contact" class="mt-6 inline-block bg-secondary px-8 py-4 rounded-lg hover:bg-white hover:text-primary transition-all duration-300">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 bg-white" data-aos="fade-up">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="service-item p-6 bg-gray-100 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300">
+          <i class="fas fa-laptop-code text-primary text-4xl mb-4"></i>
+          <h3 class="text-lg font-bold mb-2">Web Development</h3>
+          <p>We build responsive, dynamic websites tailored to your needs.</p>
+        </div>
+        <div class="service-item p-6 bg-gray-100 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300">
+          <i class="fas fa-mobile-alt text-primary text-4xl mb-4"></i>
+          <h3 class="text-lg font-bold mb-2">Mobile Development</h3>
+          <p>Get top-quality mobile apps for both Android and iOS.</p>
+        </div>
+        <div class="service-item p-6 bg-gray-100 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300">
+          <i class="fas fa-cloud text-primary text-4xl mb-4"></i>
+          <h3 class="text-lg font-bold mb-2">Cloud Solutions</h3>
+          <p>We provide scalable and secure cloud-based solutions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-16 bg-gray-100" data-aos="fade-up">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Our Portfolio</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="portfolio-item">
+          <img src="https://source.unsplash.com/random/600x400?business" alt="Project 1" class="w-full rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300">
+          <h3 class="text-lg font-bold mt-4">Project 1</h3>
+          <p>Website development for a tech company.</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://source.unsplash.com/random/600x400?tech" alt="Project 2" class="w-full rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300">
+          <h3 class="text-lg font-bold mt-4">Project 2</h3>
+          <p>Mobile app for a retail company.</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://source.unsplash.com/random/600x400?cloud" alt="Project 3" class="w-full rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300">
+          <h3 class="text-lg font-bold mt-4">Project 3</h3>
+          <p>Cloud-based solution for an eCommerce platform.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-16 bg-secondary text-center text-white" data-aos="fade-up">
+    <h2 class="text-3xl font-bold mb-4">Ready to take your business to the next level?</h2>
+    <p class="mb-6">Contact us today for a free consultation and see how we can help you grow.</p>
+    <a href="#contact" class="bg-primary px-8 py-4 rounded-lg hover:bg-white hover:text-primary transition-all duration-300">Get Started</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white py-8">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 Your Company. All rights reserved.</p>
+      <div class="social-icons mt-4 space-x-4">
+        <a href="#" class="hover:text-secondary"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-secondary"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-secondary"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="hover:text-secondary"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu Toggle Script -->
+  <script>
+    const burger = document.getElementById('burger');
+    const mobileNav = document.getElementById('mobile-nav');
+    const closeSidebar = document.getElementById('close-sidebar');
+
+    // Open sidebar
+    burger.addEventListener('click', () => {
+      mobileNav.classList.remove('translate-x-full');
+      mobileNav.classList.add('translate-x-0');
+    });
+
+    // Close sidebar
+    closeSidebar.addEventListener('click', () => {
+      mobileNav.classList.add('translate-x-full');
+      mobileNav.classList.remove('translate-x-0'); });
+
+      // Initialize AOS
+      AOS.init({
+        duration: 800, // Animation duration
+      });
+      </script>
+    </body> 
+    </html> 
