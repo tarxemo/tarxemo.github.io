@@ -33,13 +33,31 @@
     <style>
         /* Custom styles for hero section */
         .hero {
-            background: url('./images/image1.jpeg') center center/cover no-repeat;
-            height: 100vh;
             position: relative;
+            height: 100vh;
             width: 100vw;
+            overflow: hidden;
         }
+        
+        #backgroundVideo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+        
+        
+        .relative.z-10 {
+            z-index: 10;
+        }
+        
 
         .hero-overlay {
+            z-index: 0;
             position: absolute;
             top: 0;
             left: 0;
@@ -80,7 +98,7 @@
 
 <body class="bg-gray-100 font-sans max-w-full">
     <!-- Navigation Bar -->
-    <nav class="shadow-md w-fully bg-gray-400 fixed z-50 p-1">
+    <nav class="shadow-md bg-opacity-50 w-fully bg-gray-400 fixed z-50 p-1">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center">
                 <a href="#" aria-label="Home">
@@ -160,8 +178,16 @@
 
     <!-- Hero Section -->
     <section class="hero flex items-center justify-center text-center relative">
-        <div class="hero-overlay"></div>
-
+        <!-- Background Video -->
+        <video autoplay muted loop id="backgroundVideo">
+            <source src="./videos/3d Poly Lines Digital Mesh Reforming by Cameron Perry Stock Foot.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    
+        <!-- Overlay (if needed for a darker effect over the video) -->
+        <div class="hero-overlay absolute inset-0 bg-black opacity-50"></div>
+    
+        <!-- Content -->
         <div class="relative z-10 text-white px-4" data-aos="fade-up">
             <h1 class="text-2xl md:text-7xl font-bold animate__animated animate__fadeInUp">
                 Universe of <span class="text-yellow-500">software developer experts</span>
@@ -178,7 +204,7 @@
                     Services</a>
             </div>
         </div>
-
+    
         <!-- Floating shapes or icons (GSAP) -->
         <div class="absolute bottom-16 left-1/4 animate__animated animate__fadeInUp" data-aos="zoom-in">
             <svg class="w-12 h-12 text-yellow-500" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -195,6 +221,7 @@
             </svg>
         </div>
     </section>
+    
 
 
 
