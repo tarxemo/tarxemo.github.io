@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="IT Services | Anania Mtawa - Technology Solutions & Consultancy">
+    <meta name="description" content="Expert IT services by Anania Mtawa. Specializing in web development, cloud solutions, and IT consulting.">
+    <meta name="keywords" content="Anania Mtawa, TarXemo, IT services, web development, cloud solutions, software development, machine learning">
+    <meta name="robots" content="index, follow">
+
+    <title>TarXemo</title>
+
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Animate.css CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+    <!-- AOS (Animate on Scroll) CSS CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wave.js/2.0.0/wave.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Locomotive Scroll CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.3/locomotive-scroll.min.css" />
+
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        /* Custom styles for hero section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+        
+        #backgroundVideo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+        
+        
+        .relative.z-10 {
+            z-index: 10;
+        }
+        
+
+        .hero-overlay {
+            z-index: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+/*             background: rgba(0, 46, 81, 0.7); */
+            /* Matches your color theme */
+        }
+        .text-default{
+            color: rgba(0, 46, 81, 0.7);
+        }
+        .w-fully{
+            width: 100vw;
+        }
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fbbf24;
+            /* Tailwind yellow-500 */
+        }
+        #back-to-top {
+            display: none;
+          }
+          
+          #back-to-top.visible {
+            display: flex;
+          }
+          /* Apply fonts globally */
+            body {
+                font-family: 'Roboto', sans-serif;
+                font-weight: 300;
+            }
+
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans max-w-full">
+    <!-- Navigation Bar -->
+    <nav class="shadow-md bg-opacity-50 w-fully bg-gray-400 fixed z-50 p-1">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#" aria-label="Home">
+                    <img 
+                        src="./images/favicon.ico" 
+                        alt="Company Logo" 
+                        class="h-12 w-auto" 
+                    />
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="hover:text-yellow-500 transition duration-300">Home</a>
+                <a href="#services" class="hover:text-yellow-500 transition duration-300">Services</a>
+                <a href="#about-me" class="hover:text-yellow-500 transition duration-300">About me</a>
+                <a href="#contact" class="hover:text-yellow-500 transition duration-300">Contact</a>
+                <div class="relative group">
+                    <button class="hover:text-yellow-500 transition duration-300">More</button>
+                    <div class="absolute left-0 hidden mt-2 w-40 bg-white shadow-lg rounded-lg group-hover:block">
+                        <a href="#blog"
+                            class="block px-4 py-2 hover:bg-gray-100 transition duration-300">Blog</a>
+                        <a href="#careers"
+                            class="block px-4 py-2 hover:bg-gray-100 transition duration-300">Careers</a>
+                    </div>
+                </div>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button"
+                    class="hover:text-yellow-500 transition duration-300 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" style="background: rgba(0, 46, 81, 0.3); color: #f3f4f6" class="hidden w-fully md:hidden bg-white shadow-lg transition-all duration-300">
+            <div class="flex flex-col p-4">
+                <a href="#" class="py-2 hover:text-yellow-500 transition duration-300 mobile-nav-link">Home</a>
+                <a href="#services" class="py-2 hover:text-yellow-500 transition duration-300 mobile-nav-link">Services</a>
+                <a href="#about-me" class="py-2 hover:text-yellow-500 transition duration-300 mobile-nav-link">About me</a>
+                <a href="#contact" class="py-2 hover:text-yellow-500 transition duration-300 mobile-nav-link">Contact</a>
+                <div class="relative group">
+                    <button class="py-2 hover:text-yellow-500 transition duration-300">More</button>
+                    <div class="absolute left-0 hidden mt-2 w-40 bg-white shadow-lg rounded-lg group-hover:block">
+                        <a href="#blog"
+                            class="block px-4 py-2 hover:text-yellow-500 transition duration-300 mobile-nav-link">Blog</a>
+                        <a href="#careers"
+                            class="block px-4 py-2 hover:text-yellow-500 transition duration-300 mobile-nav-link">Careers</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    
+        // Close mobile menu on link click
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+    
+
+
+    <!-- Hero Section -->
+    <section class="hero flex items-center justify-center text-center relative">
+        <!-- Background Video -->
+        <video autoplay muted loop id="backgroundVideo">
+            <source src="./videos/background_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    
+        <!-- Overlay (if needed for a darker effect over the video) -->
+        <div class="hero-overlay absolute inset-0 bg-black opacity-50"></div>
+    
+        <!-- Content -->
+        <div class="relative z-10 text-white px-4" data-aos="fade-up">
+            <h1 class="text-2xl md:text-7xl font-bold animate__animated animate__fadeInUp">
+                Universe of <span class="text-yellow-500">software developer experts</span>
+            </h1>
+            <p class="mt-6 text-xl md:text-2xl animate__animated animate__fadeIn animate__delay-1s">
+                Your trusted partner in <span class="text-yellow-500">technology solutions</span>.
+            </p>
+            <div class="mt-8 space-x-2">
+                <a href="#contact"
+                    class="bg-yellow-500 text-gray-900 px-6 py-3 rounded-lg text-lg font-semibold shadow-lg hover:bg-yellow-400 transition-all duration-300 animate__animated animate__fadeIn animate__delay-2s">Get
+                    Started</a>
+                <a href="#services"
+                    class="border border-yellow-500 text-yellow-500 px-6 py-3 rounded-lg text-lg font-semibold shadow-lg hover:bg-yellow-500 hover:text-gray-900 transition-all duration-300 animate__animated animate__fadeIn animate__delay-2s">Our
+                    Services</a>
+            </div>
+        </div>
+    
+        <!-- Floating shapes or icons (GSAP) -->
+        <div class="absolute bottom-16 left-1/4 animate__animated animate__fadeInUp" data-aos="zoom-in">
+            <svg class="w-12 h-12 text-yellow-500" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 3v9m0 0l-3-3m3 3l3-3m0 6v6m0-6l-3 3m3-3l3 3" />
+            </svg>
+        </div>
+        <div class="absolute top-1/4 right-1/4 animate__animated animate__fadeInUp" data-aos="zoom-in">
+            <svg class="w-12 h-12 text-yellow-500" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M5.121 12.121l6.364-6.364m1.415 1.414l6.364 6.364m-6.364 6.364L5.121 12.12m0 0l6.364 6.364m0-12.728L17.95 18.364" />
+            </svg>
+        </div>
+    </section>
+
+    <section id="about-me" class="py-12 bg-gray-100 relative overflow-hidden w-fully">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-8 animate__animated animate__fadeInDown text-default" data-aos="fade-up">
+                About Me</h2>
+            <div class="flex flex-col md:flex-row items-center mb-8">
+                <!-- Profile Image -->
+                <div class="md:w-1/3 mb-6 md:mb-0">
+                    <img oncontextmenu="return false;" src="./images/atmm.jpg" alt="My Profile"
+                        class="rounded-full w-48 h-48 mx-auto shadow-lg animate__animated animate__fadeIn"
+                        data-aos="fade-right">
+                </div>
+                <!-- Personal Information -->
+                <div class="md:w-2/3 md:pl-8">
+                    <h3 class="text-2xl font-semibold mb-4 animate__animated animate__fadeIn text-default" data-aos="fade-left">
+                        Who am I?</h3>
+                    <p class="text-gray-700 animate__animated animate__fadeIn" data-aos="fade-up">
+                        Hello! I'm Anania Mtawa, a passionate as a software developer with a keen interest in 
+                        System development with any language, android application development, machine learning and artificial intelligence
+                        . I thrive on challenges and love to learn new skills. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row">
+                <!-- Educational Background -->
+                <div class="md:w-1/2 mb-8 md:pr-4">
+                    <h3 class="text-2xl font-semibold mb-4 animate__animated animate__fadeIn text-default" data-aos="fade-up">
+                        Educational Background</h3>
+                    <ul class="list-disc list-inside text-gray-700 animate__animated animate__fadeIn"
+                        data-aos="fade-up">
+                        <li><strong>Primary Education:</strong> Izyira secondary school, [2009-2015]</li>
+                        <li><strong>Ordinary Level:</strong> Iwiji Secondary school, [2016-2019]</li>
+                        <li><strong>Advanced Level:</strong> Njombe high school, [2020-2022]</li>
+                        <li><strong>University:</strong> University Of Dodoma(Udom), Bachelor of science in software engineering, [2022-2026]</li>
+                    </ul>
+                </div>
+
+                <!-- Skills -->
+                <div class="md:w-1/2 mb-8 md:pl-4">
+                    <h3 class="text-2xl font-semibold mb-4 animate__animated animate__fadeIn text-default" data-aos="fade-up">Skills
+                    </h3>
+                    <p class="text-gray-700 animate__animated animate__fadeIn" data-aos="fade-up">
+                        I possess a variety of skills that I have developed over the years. These include:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 animate__animated animate__fadeIn"
+                        data-aos="fade-up">
+                        <li><strong>Technical Skills:</strong> Python/Django Developer (GraphQL & REST API), Java Developer (Spring Boot, JavaFX),
+                            Angular, Flutter, React, Vue, Machine Learning, Artificial Intelligence, Neural Networks, NLP (Natural Language Processing) and web security
+                        </li>
+                        <li><strong>Soft Skills:</strong> Problem-Solving, Team Collaboration, Communication, Adaptability, Time Management</li>
+                        <li><strong>Languages:</strong> Swahili, English</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 animate__animated animate__fadeIn text-default" data-aos="fade-left">Additional
+                    Information</h3>
+                <p class="text-gray-700 animate__animated animate__fadeIn" data-aos="fade-left">
+                    In addition to my education and skills, I am passionate about Agriculture. I believe in
+                    continuous learning and personal development, which drives me to afford various achievement of my interests.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-semibold mb-4 animate__animated animate__fadeIn text-default" data-aos="fade-right">Get in
+                    Touch</h3>
+                <p class="text-gray-700 animate__animated animate__fadeIn" data-aos="fade-right">
+                    If you would like to connect with me, feel free to reach out via 
+                    <a class="text-blue-500" href="mailto:tarxemo@gmail.com">email</a> .I'm always open to new opportunities and collaborations!
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white w-fully">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-10 text-default" data-aos="fade-up">Services</h2>
+            <p class="text-lg mb-12" data-aos="fade-up" data-aos-delay="200">
+                We offer a wide range of IT services to meet your technology needs.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="p-1">
+                    <div class="service-card bg-gray-100 p-6 rounded-lg shadow-lg hover:scale-105 animate__animated animate__fadeIn"
+                        data-aos="fade-right">
+                        <svg class="w-16 h-16 text-yellow-500 mb-4 mx-auto" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18v18H3V3z" />
+                        </svg>
+                        <h3 class="text-2xl font-semibold mb-2animate__animated animate__fadeIn text-default" data-aos="fade-right">
+                            Web Development</h3>
+                        <p class="text-gray-700">Building responsive and high-performance websites tailored to your
+                            business needs. With any language prefered by client</p>
+                    </div>
+                </div>
+                <div class="p-1">
+                    <div class="service-card bg-gray-100 p-6 rounded-lg shadow-lg hover:scale-105 animate__animated animate__fadeIn"
+                        data-aos="fade-up">
+                        <svg class="w-16 h-16 text-yellow-500 mb-4 mx-auto" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                        <h3 class="text-2xl font-semibold mb-2animate__animated animate__fadeIn text-default" data-aos="fade-right">
+                            Cloud Solutions</h3>
+                        <p class="text-gray-700">Providing secure and scalable cloud solutions to enhance your business
+                            agility.</p>
+                    </div>
+                </div>
+                <div class="p-1">
+                    <div class="service-card bg-gray-100 p-6 rounded-lg shadow-lg hover:scale-105 animate__animated animate__fadeIn"
+                        data-aos="fade-left">
+                        <svg class="w-16 h-16 text-yellow-500 mb-4 mx-auto" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                        <h3 class="text-2xl font-semibold mb-2 animate__animated animate__fadeIn text-default" data-aos="fade-right">
+                            IT Consultancy</h3>
+                        <p class="text-gray-700">Expert advice and strategies to optimize your IT infrastructure and
+                            operations. Based on modern technologies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+  <!-- Testimonials Section -->
+<section id="testimonials" class="py-20 bg-gray-50 overflow-hidden w-fully">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold text-gray-800 mb-12 animate__animated animate__fadeIn text-default" data-aos="fade-up">What
+            Clients Say</h2>
+
+        <div class="flex flex-col md:flex-row justify-center">
+            <!-- Left Column -->
+            <div class="w-full md:w-1/2 p-4 flex" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white rounded-lg shadow-lg p-6 animate__animated animate__fadeIn flex-grow"
+                    data-aos="fade-right">
+                    <p class="text-gray-600 italic animate__animated animate__fadeIn" data-aos="fade-left">"The IT
+                        services provided were exceptional! Highly recommend! The team's professionalism and
+                        attention to detail made the process seamless and enjoyable. I was impressed with their
+                        ability to understand my needs and deliver a customized solution that exceeded my
+                        expectations!"</p>
+
+                    <!-- Profile image and name -->
+                    <div class="flex items-center mt-4">
+                        <img class="w-12 h-12 rounded-full mr-4" src="./images/martin.jpg" alt="Jane Doe">
+                        <div>
+                            <h5 class="text-lg font-bold text-gray-800 animate__animated animate__fadeIn"
+                                data-aos="fade-left">Martin Sanga</h5>
+                            <p class="text-gray-500">CEO, Tech Innovations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="w-full md:w-1/2 p-4">
+                <div class="flex flex-col" data-aos="fade-up" data-aos-delay="400">
+                    <!-- First Testimonial -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 mb-4 animate__animated animate__fadeIn"
+                        data-aos="fade-left">
+                        <p class="text-gray-600 italic animate__animated animate__fadeIn" data-aos="fade-right">"An
+                            amazing experience! The team was professional and delivered on time."</p>
+
+                        <!-- Profile image and name -->
+                        <div class="flex items-center mt-4">
+                            <img class="w-12 h-12 rounded-full mr-4" src="./images/asha.jpeg" alt="John Smith">
+                            <div>
+                                <h5 class="text-lg font-bold text-gray-800 animate__animated animate__fadeIn"
+                                    data-aos="fade-right">Ashura Smith</h5>
+                                <p class="text-gray-500">Founder, Creative Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Second Testimonial -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 animate__animated animate__fadeIn"
+                        data-aos="fade-left">
+                        <p class="text-gray-600 italic">"They helped us streamline our processes and improve our
+                            efficiency!"</p>
+
+                        <!-- Profile image and name -->
+                        <div class="flex items-center mt-4">
+                            <img class="w-12 h-12 rounded-full mr-4" src="./images/greygory.jpg" alt="Sarah Lee">
+                            <div>
+                                <h5 class="text-lg font-bold text-gray-800 animate__animated animate__fadeIn"
+                                    data-aos="fade-right">Greygory Sulle</h5>
+                                <p class="text-gray-500">Project Manager, Global Corp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- 
+    <section id="projects" class="py-12 bg-gray-100 w-fully">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center text-gray-800 mb-12 animate-fadeIn">My Projects</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 hover:shadow-2xlanimate__animated animate__fadeIn" data-aos="fade-right">
+              <img class="w-full h-56 object-cover transition duration-500 transform hover:scale-110" src="./images/image3.jpeg" alt="Project 1">
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800">Project Title 1</h3>
+                <p class="text-gray-600 mt-2">Short description of the project. Highlight the key technologies used and the problem it solved.</p>
+                <div class="mt-4 flex justify-between items-center">
+                  <a href="project-live-url" class="text-blue-500 hover:underline">Live Demo</a>
+                  <a href="https://github.com/project1-repo" class="ml-4 text-blue-500 hover:underline">View Code</a>
+                </div>
+              </div>
+            </div>
+      
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 hover:shadow-2xlanimate__animated animate__fadeIn" data-aos="fade-left">
+              <img class="w-full h-56 object-cover transition duration-500 transform hover:scale-110" src="./images/image5.jpeg" alt="Project 2">
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800">Project Title 2</h3>
+                <p class="text-gray-600 mt-2">Another description. Mention the technologies and the unique approach used.</p>
+                <div class="mt-4 flex justify-between items-center">
+                  <a href="project-live-url" class="text-blue-500 hover:underline">Live Demo</a>
+                  <a href="https://github.com/project2-repo" class="ml-4 text-blue-500 hover:underline">View Code</a>
+                </div>
+              </div>
+            </div>
+      
+      
+          </div>
+        </div>
+      </section>
+
+      
+
+      <section id="blog" class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center text-gray-800 mb-12 animate-fadeIn">Blog & Articles</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="bg-gray-100 shadow-lg rounded-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+              <img class="w-full h-48 object-cover transition duration-500 transform hover:scale-110" src="./images/rest.png" alt="Blog Post 1">
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800">Understanding RESTful APIs</h3>
+                <p class="text-gray-600 mt-2">In this post, we dive deep into RESTful API development, exploring best practices and security challenges.</p>
+                <a href="blog-post-url" class="text-blue-500 hover:underline mt-4 inline-block">Read More</a>
+              </div>
+            </div>
+      
+            <div class="bg-gray-100 shadow-lg rounded-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+              <img class="w-full h-48 object-cover transition duration-500 transform hover:scale-110" src="./images/cloud.jpeg" alt="Blog Post 2">
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800">Challenges in Cloud Computing</h3>
+                <p class="text-gray-600 mt-2">Explore the common challenges developers face when scaling apps on cloud platforms and solutions.</p>
+                <a href="blog-post-url" class="text-blue-500 hover:underline mt-4 inline-block">Read More</a>
+              </div>
+            </div>
+                  
+          </div>
+        </div>
+      </section>
+
+      
+
+      <section id="certifications" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center text-gray-800 mb-12 animate-fadeIn">Certifications & Awards</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="bg-white shadow-lg rounded-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+              <div class="flex items-center">
+                <img class="w-12 h-12" src="./images/google.png" alt="Certification Icon">
+                <div class="ml-4">
+                  <h3 class="text-xl font-semibold text-gray-800">Google Cloud Certified</h3>
+                  <p class="text-gray-600 mt-2">Recognized for my expertise in Google Cloud architecture and infrastructure.</p>
+                </div>
+              </div>
+            </div>
+      
+            <div class="bg-white shadow-lg rounded-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+              <div class="flex items-center">
+                <img class="w-12 h-12" src="./images/hackason.png" alt="Award Icon">
+                <div class="ml-4">
+                  <h3 class="text-xl font-semibold text-gray-800">Hackathon Winner</h3>
+                  <p class="text-gray-600 mt-2">Won the XYZ hackathon for developing an AI-powered weather forecasting system.</p>
+                </div>
+              </div>
+            </div>
+      
+            
+          </div>
+        </div>
+      </section> -->
+
+      
+
+      <section id="tech-stack" class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center text-gray-800 mb-12 animate-fadeIn text-default">Technology Stack</h2>
+          <div class="flex flex-wrap justify-center gap-6">
+            
+            <!-- Technology 1 -->
+            <div class="bg-gray-100 shadow-md rounded-full px-6 py-4 flex items-center transform transition duration-500 hover:scale-105">
+              <img class="w-10 h-10" src="./images/python.jpeg" alt="Python">
+              <span class="ml-4 text-xl text-gray-700">Python</span>
+            </div>
+            
+            <!-- Technology 2 -->
+            <div class="bg-gray-100 shadow-md rounded-full px-6 py-4 flex items-center transform transition duration-500 hover:scale-105">
+              <img class="w-10 h-10" src="./images/react.png" alt="React">
+              <span class="ml-4 text-xl text-gray-700">React</span>
+            </div>
+            <div class="bg-gray-100 shadow-md rounded-full px-6 py-4 flex items-center transform transition duration-500 hover:scale-105">
+              <img class="w-10 h-10" src="./images/angular.jpeg" alt="React">
+              <span class="ml-4 text-xl text-gray-700">Angular</span>
+            </div>
+            <div class="bg-gray-100 shadow-md rounded-full px-6 py-4 flex items-center transform transition duration-500 hover:scale-105">
+              <img class="w-10 h-10" src="./images/django.png" alt="React">
+              <span class="ml-4 text-xl text-gray-700">Django</span>
+            </div>
+            <div class="bg-gray-100 shadow-md rounded-full px-6 py-4 flex items-center transform transition duration-500 hover:scale-105">
+              <img class="w-10 h-10" src="./images/java.png" alt="React">
+              <span class="ml-4 text-xl text-gray-700">Java</span>
+            </div>
+            <div class="bg-gray-100 shadow-md rounded-full px-6 py-4 flex items-center transform transition duration-500 hover:scale-105">
+              <img class="w-10 h-10" src="./images/rest.png" alt="React">
+              <span class="ml-4 text-xl text-gray-700">Rest</span>
+            </div>
+            
+            <!-- Add more technologies with similar blocks -->
+            
+          </div>
+        </div>
+      </section>
+      
+
+
+<!-- Contact Us Section -->
+<!-- Contact Us Section -->
+<section id="contact" class="py-20 bg-gray-100 relative overflow-hidden w-fully">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-8 text-[#0D7C66] animate__animated animate__fadeIn text-default" data-aos="fade-up">
+            Get in Touch
+        </h2>
+        <p class="mb-12 text-lg text-center text-gray-700 animate__animated animate__fadeIn" data-aos="fade-up" data-aos-delay="200">
+            We’d love to hear from you! Fill out the form below or reach out through our social media channels.
+        </p>
+
+        <div class="flex flex-col md:flex-row items-center md:items-start mb-8">
+            <!-- Contact Information -->
+            <div class="md:w-1/2 mb-8 md:pr-8 animate__animated animate__fadeIn" data-aos="fade-right">
+                <h3 class="text-2xl font-semibold mb-4 text-default">Contact Information</h3>
+                <p class="text-gray-700 mb-4">
+                    Feel free to contact us for any inquiries or collaborations. We are always open to discussing new projects or creative ideas.
+                </p>
+                <ul class="list-disc list-inside text-gray-700 mb-4">
+                    <li><strong>Email:</strong> tarxemo@gmail.com</li>
+                    <li><strong>Phone:</strong> +255 (765) 106-833</li>
+                    <li><strong>Location:</strong> 259 Udom, Dodoma, Tanzania</li>
+                </ul>
+                <p class="text-gray-700">
+                    Follow us on our social media platforms to stay updated with our latest news and events.
+                </p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="https://www.facebook.com/profile.php?id=61550056881615" target="_blank" class="text-default hover:text-[#41B3A2] transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/AnaniaMtawa" target="_blank" class="text-default hover:text-[#41B3A2] transition duration-300"><i class="fab fa-twitter"></i></a>
+                    <a href="https://wa.me/255742106833" target="_blank" class="text-default hover:text-[#41B3A2] transition duration-300"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="text-default hover:text-[#41B3A2] transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/mtawaanania/" target="_blank" class="text-default hover:text-[#41B3A2] transition duration-300"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="md:w-1/2 animate__animated animate__fadeInRight" data-aos="fade-left">
+                <form class="bg-white rounded-lg shadow-lg p-8" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-2xl font-semibold mb-6 text-default">Send Me a Message</h3>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
+                        <input type="text" id="name"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+                        <input type="email" id="email"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            placeholder="Your Email" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
+                        <textarea id="message" rows="4"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit bg-gray-400"
+                        class="bg-gray-500 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300 ease-in-out">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer Section -->
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-10 w-fully">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- About Section -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">About Me</h3>
+                    <p class="text-gray-400 mb-4">
+                        We are dedicated to providing the best IT services to our clients. Our team of experts is always
+                        ready to help you with your technology needs.
+                    </p>
+                    <p class="text-gray-400">
+                        <strong>Address:</strong> 259 Udom, Dodoma, Tanzania
+                    </p>
+                </div>
+                <!-- Quick Links Section -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#services"
+                                class="text-gray-400 hover:text-yellow-500 transition duration-300">Services</a></li>
+                        <li><a href="#about-me" class="text-gray-400 hover:text-yellow-500 transition duration-300">About
+                                me</a></li>
+                        <li><a href="#contact"
+                                class="text-gray-400 hover:text-yellow-500 transition duration-300">Contact</a></li>
+                        <li><a href="#blog" class="text-gray-400 hover:text-yellow-500 transition duration-300">Blog</a>
+                        </li>
+                        <li><a href="#careers"
+                                class="text-gray-400 hover:text-yellow-500 transition duration-300">Careers</a></li>
+                    </ul>
+                </div>
+                <!-- Newsletter Subscription Section -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Subscribe to our Newsletter</h3>
+                    <p class="text-gray-400 mb-4">
+                        Stay updated with the latest news and offers from IT Services.
+                    </p>
+                    <form action="#" method="POST">
+                        <div class="flex flex-col md:flex-row">
+                            <input type="email" placeholder="Your Email"
+                                class="flex-1 p-2 rounded-lg mb-2 md:mb-0 md:mr-2" required>
+                            <button type="submit"
+                                class="bg-yellow-500 text-gray-900 px-4 py-2 rounded-lg hover:bg-yellow-400 transition duration-300">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wave Animation -->
+
+        <!-- Bottom Bar -->
+        <div class="bg-gray-800 py-4 mt-10">
+            <div class="container mx-auto text-center">
+                <p class="text-gray-400">© 2024 IT Services. All rights reserved.</p>
+                <div class="flex justify-center space-x-4 mt-2">
+                    <a  href="https://www.facebook.com/profile.php?id=61550056881615" target="_blank" class="text-gray-400 hover:text-yellow-500 transition duration-300"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/AnaniaMtawa" target="_blank" class="text-gray-400 hover:text-yellow-500 transition duration-300"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-500 transition duration-300"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/255742106833" target="_blank" class="text-gray-400 hover:text-yellow-500 transition duration-300"><i
+                            class="fab fa-whatsapp"></i></a>
+                    <a  href="https://www.instagram.com/mtawaanania/" target="_blank"  class="text-gray-400 hover:text-yellow-500 transition duration-300"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+     
+<!-- Back to Top Button -->
+<a href="javascript:void(0);" id="back-to-top" class="hidden fixed z-50 bottom-10 left-10 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+    </svg>
+</a>
+
+<script>
+    // Scroll event to show/hide the button
+    window.onscroll = function() {
+      let button = document.getElementById('back-to-top');
+      // Show the button after scrolling 100px
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        button.classList.remove('hidden');
+        button.classList.add('visible', 'animate__fadeIn');
+      } else {
+        button.classList.remove('visible', 'animate__fadeIn');
+        button.classList.add('hidden');
+      }
+    };
+  
+    // Smooth scrolling when clicking the back to top button
+    document.getElementById('back-to-top').addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'  // Smooth scrolling behavior
+      });
+    });
+  </script>
+  
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.3/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+    <script>
+        // Initialize AOS (Animate on Scroll)
+        AOS.init({
+            duration: 1800,
+        });
+
+        // Locomotive Scroll Initialization
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('body'),
+            smooth: true
+        });
+
+        // Floating shapes animation with GSAP
+        gsap.to('.floating-icon', {
+            y: -20,
+            repeat: -1,
+            yoyo: true,
+            ease: "power1.inOut",
+            duration: 2,
+        });
+    </script>
+
+</body>
+
+</html>
