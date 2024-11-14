@@ -14,26 +14,11 @@
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <!-- Tailwind CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
-    <!-- Animate.css CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-
-    <!-- AOS (Animate on Scroll) CSS CDN -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wave.js/2.0.0/wave.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
-    <!-- Locomotive Scroll CSS -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.3/locomotive-scroll.min.css" />
-
-    <!-- Font Awesome CDN for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="./css/tailwind.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/animate.css" />
+    <link href="./css/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap">
 
     <style>
         /* Custom styles for hero section */
@@ -97,7 +82,9 @@
                 font-family: 'Roboto', sans-serif;
                 font-weight: 300;
             }
-
+        body{
+            
+        }
     </style>
 </head>
 
@@ -182,7 +169,7 @@
 
 
     <!-- Hero Section -->
-    <section class="hero flex items-center justify-center text-center relative">
+    <section class="hero flex items-center max-w-full justify-center text-center relative">
         <!-- Background Video -->
         <video autoplay muted loop id="backgroundVideo">
             <source src="./videos/background_video.mp4" type="video/mp4">
@@ -227,7 +214,7 @@
         </div>
     </section>
 
-    <section id="about-me" class="py-12 bg-gray-100 relative overflow-hidden w-fully">
+    <section id="about-me" class="py-12 bg-gray-100 max-w-full">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-8 animate__animated animate__fadeInDown text-default" data-aos="fade-up">
                 About Me</h2>
@@ -742,9 +729,8 @@
   </script>
   
   
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.3/locomotive-scroll.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="./js/aos.js"></script>
+    <script src="./js/gsap.js"></script>
 
     <script>
         // Initialize AOS (Animate on Scroll)
