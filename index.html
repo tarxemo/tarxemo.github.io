@@ -8,18 +8,54 @@
     <meta name="description" content="Expert IT services by Anania Mtawa. Specializing in web development, cloud solutions, and IT consulting.">
     <meta name="keywords" content="Anania Mtawa, Anania Tenson Mtawa, TarXemo, IT services, web development, cloud solutions, software development, machine learning">
     <meta name="robots" content="index, follow">
-
     <title>TarXemo</title>
-
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-    <!-- Tailwind CSS CDN -->
-    <link href="./css/tailwind.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/animate.css" />
-    <link href="./css/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/tailwind.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/aos.css">
     <link rel="stylesheet" href="./css/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap">
 
+    <!-- Structured Data (Schema Markup) for Organization and Logo -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TarXemo",
+      "url": "https://tarxemo.github.io",
+      "logo": "https://tarxemo.github.io/images/favicon.ico",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61550056881615",
+        "https://x.com/AnaniaMtawa",
+        "https://www.instagram.com/mtawaanania/",
+        "https://wa.me/255742106833"
+      ]
+    }
+    </script>
+
+    <!-- Structured Data (Schema Markup) for Background Video -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "Background Video",
+      "description": "A background video on TarXemo website showcasing IT services.",
+      "thumbnailUrl": "https://tarxemo.github.io/images/favicon.ico",
+      "uploadDate": "2024-11-13T08:00:00+00:00",
+      "contentUrl": "https://tarxemo.github.io/videos/background_video.mp4"
+    }
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "ImageObject",
+          "contentUrl": "https://tarxemo.github.io/images/atmm.jpg",
+          "name": "Profile photo of Anania Mtawa",
+          "description": "Anania Mtawa, founder of TarXemo IT services."
+        }
+        </script>
+        
     <style>
         /* Custom styles for hero section */
         .hero {
@@ -170,7 +206,7 @@
     <!-- Hero Section -->
     <section class="hero flex items-center max-w-full justify-center text-center relative">
         <!-- Background Video -->
-        <video autoplay muted loop preload="auto" playsinline id="backgroundVideo">
+        <video autoplay muted loop preload="auto" playsinline id="backgroundVideo" title="TarXemo Background Video">
             <source src="./videos/background_video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>        
@@ -220,7 +256,7 @@
             <div class="flex flex-col md:flex-row items-center mb-8">
                 <!-- Profile Image -->
                 <div class="md:w-1/3 mb-6 md:mb-0">
-                    <img oncontextmenu="return false;" src="./images/atmm.jpg" alt="TarXemo"
+                    <img loading="lazy" oncontextmenu="return false;" src="./images/atmm.jpg" alt="TarXemo - Profile Image"
                         class="rounded-full w-48 h-48 mx-auto shadow-lg animate__animated animate__fadeIn"
                         data-aos="fade-right">
                 </div>
@@ -363,7 +399,7 @@
 
                     <!-- Profile image and name -->
                     <div class="flex items-center mt-4">
-                        <img class="w-12 h-12 rounded-full mr-4" src="./images/martin.jpg" alt="Martin Sanga">
+                        <img loading="lazy" class="w-12 h-12 rounded-full mr-4" src="./images/martin.jpg" alt="Martin Sanga">
                         <div>
                             <h5 class="text-lg font-bold text-gray-800 animate__animated animate__fadeIn"
                                 data-aos="fade-left">Martin Sanga</h5>
@@ -384,7 +420,7 @@
 
                         <!-- Profile image and name -->
                         <div class="flex items-center mt-4">
-                            <img class="w-12 h-12 rounded-full mr-4" src="./images/asha.jpeg" alt="Asha">
+                            <img loading="lazy" class="w-12 h-12 rounded-full mr-4" src="./images/asha.jpeg" alt="Dorece Makuhana">
                             <div>
                                 <h5 class="text-lg font-bold text-gray-800 animate__animated animate__fadeIn"
                                     data-aos="fade-right">Ashura Smith</h5>
@@ -401,7 +437,7 @@
 
                         <!-- Profile image and name -->
                         <div class="flex items-center mt-4">
-                            <img class="w-12 h-12 rounded-full mr-4" src="./images/greygory.jpg" alt="Greygory">
+                            <img loading="lazy" class="w-12 h-12 rounded-full mr-4" src="./images/greygory.jpg" alt="Greygory">
                             <div>
                                 <h5 class="text-lg font-bold text-gray-800 animate__animated animate__fadeIn"
                                     data-aos="fade-right">Greygory Sulle</h5>
@@ -522,29 +558,29 @@
             
             <!-- Technology 1 -->
             <div class="bg-gray-100 shadow-md rounded-full px-6 py-4 flex items-center transform transition duration-500 hover:scale-105">
-              <img class="w-10 h-10" src="./images/python.jpeg" alt="Python">
+              <img loading="lazy" class="w-10 h-10" src="./images/python.jpeg" alt="Python">
               <span class="ml-4 text-xl text-gray-700">Python</span>
             </div>
             
             <!-- Technology 2 -->
             <div class="bg-gray-100 shadow-md rounded-full px-6 py-4 flex items-center transform transition duration-500 hover:scale-105">
-              <img class="w-10 h-10" src="./images/react.png" alt="React">
+              <img loading="lazy" class="w-10 h-10" src="./images/react.png" alt="React">
               <span class="ml-4 text-xl text-gray-700">React</span>
             </div>
             <div class="bg-gray-100 shadow-md rounded-full px-6 py-4 flex items-center transform transition duration-500 hover:scale-105">
-              <img class="w-10 h-10" src="./images/angular.jpeg" alt="React">
+              <img loading="lazy" class="w-10 h-10" src="./images/angular.jpeg" alt="Angular">
               <span class="ml-4 text-xl text-gray-700">Angular</span>
             </div>
-            <div class="bg-gray-100 shadow-md rounded-full px-6 py-4 flex items-center transform transition duration-500 hover:scale-105">
-              <img class="w-10 h-10" src="./images/django.png" alt="React">
+            <div  class="bg-gray-100 shadow-md rounded-full px-6 py-4 flex items-center transform transition duration-500 hover:scale-105">
+              <img loading="lazy" class="w-10 h-10" src="./images/django.png" alt="Django">
               <span class="ml-4 text-xl text-gray-700">Django</span>
             </div>
             <div class="bg-gray-100 shadow-md rounded-full px-6 py-4 flex items-center transform transition duration-500 hover:scale-105">
-              <img class="w-10 h-10" src="./images/java.png" alt="React">
+              <img loading="lazy" class="w-10 h-10" src="./images/java.png" alt="Java">
               <span class="ml-4 text-xl text-gray-700">Java</span>
             </div>
             <div class="bg-gray-100 shadow-md rounded-full px-6 py-4 flex items-center transform transition duration-500 hover:scale-105">
-              <img class="w-10 h-10" src="./images/rest.png" alt="React">
+              <img loading="lazy" class="w-10 h-10" src="./images/rest.png" alt="Rest">
               <span class="ml-4 text-xl text-gray-700">Rest</span>
             </div>
             
