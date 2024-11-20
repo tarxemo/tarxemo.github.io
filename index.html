@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,65 +21,72 @@
 
     <!-- Structured Data (Schema Markup) for Organization and Logo -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "TarXemo",
-      "url": "https://tarxemo.github.io",
-      "logo": "https://tarxemo.github.io/images/favicon.ico",
-      "sameAs": [
-        "https://www.facebook.com/profile.php?id=61550056881615",
-        "https://x.com/AnaniaMtawa",
-        "https://www.instagram.com/mtawaanania/",
-        "https://wa.me/255742106833"
-      ]
-    }
-    </script>
-
-    <!-- Structured Data (Schema Markup) for Background Video -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoObject",
-      "name": "Background Video",
-      "description": "A background video on TarXemo website showcasing IT services.",
-      "thumbnailUrl": "https://tarxemo.github.io/images/favicon.ico",
-      "uploadDate": "2024-11-13T08:00:00+00:00",
-      "contentUrl": "https://tarxemo.github.io/videos/background_video.mp4"
-    }
-    </script>
-
-    <script type="application/ld+json">
         {
           "@context": "https://schema.org",
-          "@type": "ImageObject",
-          "contentUrl": "https://tarxemo.github.io/images/atmm.jpg",
-          "name": "Profile photo of Anania Mtawa",
-          "description": "Anania Mtawa, founder of TarXemo IT services."
+          "@type": "Organization",
+          "name": "TarXemo",
+          "url": "https://tarxemo.github.io",
+          "logo": "https://tarxemo.github.io/images/favicon.ico",
+          "description": "TarXemo is an IT services organization founded by Anania Mtawa.",
+          "sameAs": [
+            "https://www.facebook.com/profile.php?id=61550056881615",
+            "https://x.com/AnaniaMtawa",
+            "https://www.instagram.com/mtawaanania/",
+            "https://wa.me/255742106833"
+          ]
         }
         </script>
 
+
+    <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "ImageObject",
+              "contentUrl": "https://tarxemo.github.io/images/atmm.jpg",
+              "name": "Profile photo of Anania Mtawa",
+              "description": "A profile photo of Anania Mtawa, the founder of TarXemo IT services."
+            }
+            </script>
+
+
+    <script type="application/ld+json">
+                {
+                  "@context": "https://schema.org",
+                  "@type": "ImageObject",
+                  "contentUrl": "https://tarxemo.github.io/images/favicon.ico",
+                  "name": "Logo of TarXemo",
+                  "description": "The official logo of TarXemo IT services."
+                }
+    </script>
+    <style>
+        html,
+        body {
+            overflow-x: hidden;
+        }
+    </style>
 </head>
 
-<body class="bg-gray-100 font-sans max-w-full">
-    <!-- Navigation Bar -->
+<body class="bg-gray-100 font-sans">
     <!-- Navigation Bar -->
     <nav id="navbar"
-        class="bg-white backdrop-blur-md shadow-lg fixed w-full z-50 p-3 rounded-lg transition-all duration-300 ease-in-out">
+        class="bg-default w-full text-white shadow-lg fixed z-50 p-3 transition-all duration-300 ease-in-out">
         <div class="container mx-auto flex justify-between items-center">
             <!-- Logo Section -->
             <div class="flex items-center">
-                <a href="#" aria-label="home">
-                    <img src="./images/favicon.ico" alt="TarXemo"
-                        class="h-10 w-auto rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out" />
+                <a href="/" aria-label="TarXemo Home">
+                    <a href="#about-me" class="hover:text-yellow-500 transition duration-300">About Me</a>
+                    <img src="./images/favicon.ico" alt="TarXemo Logo - TarXemo IT Services"
+                        class="h-10 w-auto rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
+                        width="40" height="40" loading="lazy" />
                 </a>
+
             </div>
 
             <!-- Desktop Menu Links -->
             <div class="hidden md:flex space-x-8 items-center">
                 <a href="#" class="hover:text-yellow-500 transition duration-300">Home</a>
-                <a href="#services" class="hover:text-yellow-500 transition duration-300">Services</a>
                 <a href="#about-me" class="hover:text-yellow-500 transition duration-300">About Me</a>
+                <a href="#services" class="hover:text-yellow-500 transition duration-300">Services</a>
                 <a href="#contact" class="hover:text-yellow-500 transition duration-300">Contact</a>
                 <!-- Dropdown Menu -->
                 <div class="relative group">
@@ -107,7 +113,8 @@
                     class="hover:text-yellow-500 transition duration-300 focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                            d="M4 6h16M4 12h16m-7 6h7">
+                        </path>
                     </svg>
                 </button>
             </div>
@@ -115,16 +122,16 @@
 
         <!-- Mobile Menu -->
         <div id="mobile-menu"
-            class="hidden w-full md:hidden bg-white/80 backdrop-blur-lg shadow-lg rounded-lg mt-2 transition-all duration-300">
-            <div class="flex flex-col space-y-2">
+            class="hidden md:hidden bg-white/80 backdrop-blur-lg shadow-lg rounded-lg mt-2 transition-all duration-300">
+            <div class="flex flex-col space-y-2 px-4 py-2">
                 <a href="#" class="py-2 hover:text-yellow-500 transition duration-300">Home</a>
-                <a href="#services" class="py-2 hover:text-yellow-500 transition duration-300">Services</a>
                 <a href="#about-me" class="py-2 hover:text-yellow-500 transition duration-300">About Me</a>
+                <a href="#services" class="py-2 hover:text-yellow-500 transition duration-300">Services</a>
                 <a href="#contact" class="py-2 hover:text-yellow-500 transition duration-300">Contact</a>
                 <!-- Dropdown in Mobile -->
                 <div class="relative">
                     <button class="py-2 hover:text-yellow-500 transition duration-300 w-full text-left">More</button>
-                    <div class="pl-4 mt-2 space-y-2 hidden group-hover:block">
+                    <div class="pl-4 mt-2 space-y-2 hidden">
                         <a href="#blog"
                             class="block px-4 py-2 bg-yellow-50 hover:bg-yellow-100 rounded-lg transition duration-300">Blog</a>
                         <a href="#careers"
@@ -134,6 +141,17 @@
             </div>
         </div>
     </nav>
+
+    <script>
+        // JavaScript to toggle the mobile menu
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
 
     <script>
         let lastScrollTop = 0;
