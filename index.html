@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="IT Services | Anania Mtawa - Technology Solutions & Consultancy">
-    <meta name="description" content="Expert IT services by Anania Mtawa. Specializing in web development, cloud solutions, and IT consulting.">
-    <meta name="keywords" content="Anania Mtawa, Anania Tenson Mtawa, TarXemo, IT services, web development, cloud solutions, software development, machine learning">
+    <meta name="description"
+        content="Expert IT services by Anania Mtawa. Specializing in web development, cloud solutions, and IT consulting.">
+    <meta name="keywords"
+        content="Anania Mtawa, Anania Tenson Mtawa, TarXemo, IT services, web development, cloud solutions, software development, machine learning">
     <meta name="robots" content="index, follow">
     <title>TarXemo</title>
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
@@ -15,203 +16,240 @@
     <link rel="stylesheet" href="./css/aos.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap">
 
     <!-- Structured Data (Schema Markup) for Organization and Logo -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "TarXemo",
-      "url": "https://tarxemo.github.io",
-      "logo": "https://tarxemo.github.io/images/favicon.ico",
-      "sameAs": [
-        "https://www.facebook.com/profile.php?id=61550056881615",
-        "https://x.com/AnaniaMtawa",
-        "https://www.instagram.com/mtawaanania/",
-        "https://wa.me/255742106833"
-      ]
-    }
-    </script>
-
-    <!-- Structured Data (Schema Markup) for Background Video -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoObject",
-      "name": "Background Video",
-      "description": "A background video on TarXemo website showcasing IT services.",
-      "thumbnailUrl": "https://tarxemo.github.io/images/favicon.ico",
-      "uploadDate": "2024-11-13T08:00:00+00:00",
-      "contentUrl": "https://tarxemo.github.io/videos/background_video.mp4"
-    }
-    </script>
-
-    <script type="application/ld+json">
         {
           "@context": "https://schema.org",
-          "@type": "ImageObject",
-          "contentUrl": "https://tarxemo.github.io/images/atmm.jpg",
-          "name": "Profile photo of Anania Mtawa",
-          "description": "Anania Mtawa, founder of TarXemo IT services."
+          "@type": "Organization",
+          "name": "TarXemo",
+          "url": "https://tarxemo.github.io",
+          "logo": "https://tarxemo.github.io/images/favicon.ico",
+          "description": "TarXemo is an IT services organization founded by Anania Mtawa.",
+          "sameAs": [
+            "https://www.facebook.com/profile.php?id=61550056881615",
+            "https://x.com/AnaniaMtawa",
+            "https://www.instagram.com/mtawaanania/",
+            "https://wa.me/255742106833"
+          ]
         }
         </script>
-        
+
+
+    <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "ImageObject",
+              "contentUrl": "https://tarxemo.github.io/images/atmm.jpg",
+              "name": "Profile photo of Anania Mtawa",
+              "description": "A profile photo of Anania Mtawa, the founder of TarXemo IT services."
+            }
+            </script>
+
+
+    <script type="application/ld+json">
+                {
+                  "@context": "https://schema.org",
+                  "@type": "ImageObject",
+                  "contentUrl": "https://tarxemo.github.io/images/favicon.ico",
+                  "name": "Logo of TarXemo",
+                  "description": "The official logo of TarXemo IT services."
+                }
+    </script>
+    <style>
+        html,
+        body {
+            overflow-x: hidden;
+        }
+    </style>
 </head>
 
-<body class="bg-gray-100 font-sans max-w-full">
+<body class="bg-gray-100 font-sans">
     <!-- Navigation Bar -->
-<!-- Navigation Bar -->
-<nav id="navbar" class="bg-white backdrop-blur-md shadow-lg fixed w-full z-50 p-3 rounded-lg transition-all duration-300 ease-in-out">
-    <div class="container mx-auto flex justify-between items-center">
-        <!-- Logo Section -->
-        <div class="flex items-center">
-            <a href="#" aria-label="home">
-                <img 
-                    src="./images/favicon.ico" 
-                    alt="TarXemo" 
-                    class="h-10 w-auto rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out" 
-                />
-            </a>
-        </div>
+    <nav id="navbar"
+        class="bg-default w-full text-white shadow-lg fixed z-50 p-3 transition-all duration-300 ease-in-out">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo Section -->
+            <div class="flex items-center">
+                <a href="/" aria-label="TarXemo Home">
+                    <img src="./images/favicon.ico" alt="TarXemo Logo - TarXemo IT Services"
+                        class="h-10 w-auto rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
+                        width="40" height="40" loading="lazy" />
+                </a>
 
-        <!-- Desktop Menu Links -->
-        <div class="hidden md:flex space-x-8 items-center">
-            <a href="#" class="hover:text-yellow-500 transition duration-300">Home</a>
-            <a href="#services" class="hover:text-yellow-500 transition duration-300">Services</a>
-            <a href="#about-me" class="hover:text-yellow-500 transition duration-300">About Me</a>
-            <a href="#contact" class="hover:text-yellow-500 transition duration-300">Contact</a>
-            <!-- Dropdown Menu -->
-            <div class="relative group">
-                <button class="hover:text-yellow-500 transition duration-300 flex items-center">
-                    More
-                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </div>
+
+            <!-- Desktop Menu Links -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#" class="hover:text-yellow-500 transition duration-300">Home</a>
+                <a href="#about-me" class="hover:text-yellow-500 transition duration-300">About Me</a>
+                <a href="#services" class="hover:text-yellow-500 transition duration-300">Services</a>
+                <a href="#contact" class="hover:text-yellow-500 transition duration-300">Contact</a>
+                <!-- Dropdown Menu -->
+                <div class="relative group">
+                    <button class="hover:text-yellow-500 transition duration-300 flex items-center">
+                        More
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div
+                        class="absolute left-0 hidden group-hover:block mt-2 w-40 bg-white/80 backdrop-blur-lg shadow-lg rounded-lg transition-all duration-200 ease-in-out">
+                        <a href="#blog"
+                            class="block px-4 py-2 hover:bg-yellow-100 rounded-t-lg transition duration-300">Blog</a>
+                        <a href="#careers"
+                            class="block px-4 py-2 hover:bg-yellow-100 rounded-b-lg transition duration-300">Careers</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button"
+                    class="hover:text-yellow-500 transition duration-300 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7">
+                        </path>
                     </svg>
                 </button>
-                <div class="absolute left-0 hidden group-hover:block mt-2 w-40 bg-white/80 backdrop-blur-lg shadow-lg rounded-lg transition-all duration-200 ease-in-out">
-                    <a href="#blog" class="block px-4 py-2 hover:bg-yellow-100 rounded-t-lg transition duration-300">Blog</a>
-                    <a href="#careers" class="block px-4 py-2 hover:bg-yellow-100 rounded-b-lg transition duration-300">Careers</a>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white/80 backdrop-blur-lg shadow-lg rounded-lg mt-2 transition-all duration-300">
+            <div class="flex flex-col space-y-2 px-4 py-2">
+                <a href="#" class="py-2 hover:text-yellow-500 transition duration-300">Home</a>
+                <a href="#about-me" class="py-2 hover:text-yellow-500 transition duration-300">About Me</a>
+                <a href="#services" class="py-2 hover:text-yellow-500 transition duration-300">Services</a>
+                <a href="#contact" class="py-2 hover:text-yellow-500 transition duration-300">Contact</a>
+                <!-- Dropdown in Mobile -->
+                <div class="relative">
+                    <button class="py-2 hover:text-yellow-500 transition duration-300 w-full text-left">More</button>
+                    <div class="pl-4 mt-2 space-y-2 hidden">
+                        <a href="#blog"
+                            class="block px-4 py-2 bg-yellow-50 hover:bg-yellow-100 rounded-lg transition duration-300">Blog</a>
+                        <a href="#careers"
+                            class="block px-4 py-2 bg-yellow-50 hover:bg-yellow-100 rounded-lg transition duration-300">Careers</a>
+                    </div>
                 </div>
             </div>
         </div>
+    </nav>
 
-        <!-- Mobile Menu Button -->
-        <div class="md:hidden">
-            <button id="mobile-menu-button" class="hover:text-yellow-500 transition duration-300 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
+    <script>
+        // JavaScript to toggle the mobile menu
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // Scrolling down, hide the navbar
+                navbar.style.transform = "translateY(-100%)";
+            } else {
+                // Scrolling up, show the navbar
+                navbar.style.transform = "translateY(0)";
+            }
+
+            lastScrollTop = scrollTop;
+        });
+    </script>
+<!-- Hero Section -->
+<section class="hero flex items-center max-w-full justify-center text-center relative">
+    <!-- Background Video -->
+    <video autoplay muted loop preload="auto" playsinline id="backgroundVideo" title="TarXemo Background Video">
+        <source src="./videos/background_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Overlay -->
+    <div class="hero-overlay absolute inset-0 bg-black opacity-70"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 text-white px-4" data-aos="fade-up">
+        <!-- Personal Introduction -->
+        <h1 class="text-3xl md:text-6xl font-bold animate__animated animate__fadeInUp">
+            Hi, I'm <span class="text-yellow-500">Anania Mtawa</span>
+        </h1>
+        <p class="mt-4 text-lg md:text-xl animate__animated animate__fadeIn animate__delay-1s">
+            A <span class="text-yellow-500">Software Developer</span> specializing in modern web solutions, 
+            <span class="text-yellow-500">AI</span>, and <span class="text-yellow-500">machine learning</span>. 
+            I craft scalable, user-friendly digital experiences.
+        </p>
+        <p class="mt-4 text-md md:text-lg animate__animated animate__fadeIn animate__delay-2s">
+            Let's explore how my skills in Python, Angular, and system development can elevate your next project.
+        </p>
+
+        <!-- Call to Actions -->
+        <div class="mt-8 space-x-4">
+            <a href="#contact"
+                class="bg-yellow-500 text-gray-900 px-6 py-3 rounded-lg text-lg font-semibold shadow-lg hover:bg-yellow-400 transition-all duration-300 animate__animated animate__fadeIn animate__delay-3s">
+                Contact Me
+            </a>
+            <a href="#services"
+                class="border border-yellow-500 text-yellow-500 px-6 py-3 rounded-lg text-lg font-semibold shadow-lg hover:bg-yellow-500 hover:text-gray-900 transition-all duration-300 animate__animated animate__fadeIn animate__delay-3s">
+                My Work
+            </a>
         </div>
     </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden w-full md:hidden bg-white/80 backdrop-blur-lg shadow-lg rounded-lg mt-2 transition-all duration-300">
-        <div class="flex flex-col space-y-2">
-            <a href="#" class="py-2 hover:text-yellow-500 transition duration-300">Home</a>
-            <a href="#services" class="py-2 hover:text-yellow-500 transition duration-300">Services</a>
-            <a href="#about-me" class="py-2 hover:text-yellow-500 transition duration-300">About Me</a>
-            <a href="#contact" class="py-2 hover:text-yellow-500 transition duration-300">Contact</a>
-            <!-- Dropdown in Mobile -->
-            <div class="relative">
-                <button class="py-2 hover:text-yellow-500 transition duration-300 w-full text-left">More</button>
-                <div class="pl-4 mt-2 space-y-2 hidden group-hover:block">
-                    <a href="#blog" class="block px-4 py-2 bg-yellow-50 hover:bg-yellow-100 rounded-lg transition duration-300">Blog</a>
-                    <a href="#careers" class="block px-4 py-2 bg-yellow-50 hover:bg-yellow-100 rounded-lg transition duration-300">Careers</a>
-                </div>
-            </div>
-        </div>
+    <!-- Icons or Floating Details -->
+    <div class="absolute bottom-16 left-1/4 animate__animated animate__fadeInUp" data-aos="zoom-in">
+        <svg class="w-12 h-12 text-yellow-500" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 3v9m0 0l-3-3m3 3l3-3m0 6v6m0-6l-3 3m3-3l3 3" />
+        </svg>
     </div>
-</nav>
+    <div class="absolute top-1/4 right-1/4 animate__animated animate__fadeInUp" data-aos="zoom-in">
+        <svg class="w-12 h-12 text-yellow-500" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M5.121 12.121l6.364-6.364m1.415 1.414l6.364 6.364m-6.364 6.364L5.121 12.12m0 0l6.364 6.364m0-12.728L17.95 18.364" />
+        </svg>
+    </div>
+</section>
 
-<script>
-    let lastScrollTop = 0;
-    const navbar = document.getElementById('navbar');
-
-    window.addEventListener('scroll', () => {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        if (scrollTop > lastScrollTop) {
-            // Scrolling down, hide the navbar
-            navbar.style.transform = "translateY(-100%)";
-        } else {
-            // Scrolling up, show the navbar
-            navbar.style.transform = "translateY(0)";
-        }
-        
-        lastScrollTop = scrollTop;
-    });
-</script>
-
-    
-
-
-    <!-- Hero Section -->
-    <section class="hero flex items-center max-w-full justify-center text-center relative">
-        <!-- Background Video -->
-        <video autoplay muted loop preload="auto" playsinline id="backgroundVideo" title="TarXemo Background Video">
-            <source src="./videos/background_video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>        
-    
-        <!-- Overlay (if needed for a darker effect over the video) -->
-        <div class="hero-overlay absolute inset-0 bg-black opacity-50"></div>
-    
-        <!-- Content -->
-        <div class="relative z-10 text-white px-4" data-aos="fade-up">
-            <h1 class="text-2xl md:text-7xl font-bold animate__animated animate__fadeInUp">
-                Universe of <span class="text-yellow-500">software developer experts</span>
-            </h1>
-            <p class="mt-6 text-xl md:text-2xl animate__animated animate__fadeIn animate__delay-1s">
-                Your trusted partner in <span class="text-yellow-500">technology solutions</span>.
-            </p>
-            <div class="mt-8 space-x-2">
-                <a href="#contact"
-                    class="bg-yellow-500 text-gray-900 px-6 py-3 rounded-lg text-lg font-semibold shadow-lg hover:bg-yellow-400 transition-all duration-300 animate__animated animate__fadeIn animate__delay-2s">Get
-                    Started</a>
-                <a href="#services"
-                    class="border border-yellow-500 text-yellow-500 px-6 py-3 rounded-lg text-lg font-semibold shadow-lg hover:bg-yellow-500 hover:text-gray-900 transition-all duration-300 animate__animated animate__fadeIn animate__delay-2s">
-                    Services</a>
-            </div>
-        </div>
-    
-        <!-- Floating shapes or icons (GSAP) -->
-        <div class="absolute bottom-16 left-1/4 animate__animated animate__fadeInUp" data-aos="zoom-in">
-            <svg class="w-12 h-12 text-yellow-500" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M12 3v9m0 0l-3-3m3 3l3-3m0 6v6m0-6l-3 3m3-3l3 3" />
-            </svg>
-        </div>
-        <div class="absolute top-1/4 right-1/4 animate__animated animate__fadeInUp" data-aos="zoom-in">
-            <svg class="w-12 h-12 text-yellow-500" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M5.121 12.121l6.364-6.364m1.415 1.414l6.364 6.364m-6.364 6.364L5.121 12.12m0 0l6.364 6.364m0-12.728L17.95 18.364" />
-            </svg>
-        </div>
-    </section>
 
     <section id="about-me" class="py-12 bg-gray-100 max-w-full">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-8 animate__animated animate__fadeInDown text-default" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-center mb-8 animate__animated animate__fadeInDown text-default"
+                data-aos="fade-up">
                 About Me</h2>
-            <div class="flex flex-col md:flex-row items-center mb-8">
+            <div class="flex flex-col justify-center md:flex-row items-center mb-8">
                 <!-- Profile Image -->
-                <div class="md:w-1/3 mb-6 md:mb-0">
-                    <img loading="lazy" oncontextmenu="return false;" src="./images/atmm.jpg" alt="TarXemo - Profile Image"
+                <div class="md:w-1/3 flex mb-6 md:mb-0 justify-end">
+                    <img loading="lazy" oncontextmenu="return false;" src="./images/atmm.jpg"
+                        alt="TarXemo - Profile Image"
                         class="rounded-full w-48 h-48 mx-auto shadow-lg animate__animated animate__fadeIn"
                         data-aos="fade-right">
                 </div>
                 <!-- Personal Information -->
-                <div class="md:w-2/3 md:pl-8">
-                    <h3 class="text-2xl font-semibold mb-4 animate__animated animate__fadeIn text-default" data-aos="fade-left">
+                <div class="md:w-2/3 justify-end">
+                    <h3 class="text-2xl font-semibold mb-4 animate__animated animate__fadeIn text-default"
+                        data-aos="fade-left">
                         Who am I?</h3>
                     <p class="text-gray-700 animate__animated animate__fadeIn" data-aos="fade-up">
-                        Hello! I'm Anania Mtawa, a passionate as a software developer with a keen interest in 
-                        System development with many language, android application development, machine learning and artificial intelligence
-                        . I thrive on challenges and love to learn new skills. 
+                        Hello! I'm Anania Mtawa, a passionate as a software developer with a keen interest in
+                        System development with many language, android application development, machine learning and
+                        artificial intelligence
+                        . I thrive on challenges and love to learn new skills.
                     </p>
                 </div>
             </div>
@@ -219,50 +257,60 @@
             <div class="flex flex-col md:flex-row">
                 <!-- Educational Background -->
                 <div class="md:w-1/2 mb-8 md:pr-4">
-                    <h3 class="text-2xl font-semibold mb-4 animate__animated animate__fadeIn text-default" data-aos="fade-up">
+                    <h3 class="text-2xl font-semibold mb-4 animate__animated animate__fadeIn text-default"
+                        data-aos="fade-up">
                         Educational Background</h3>
                     <ul class="list-disc list-inside text-gray-700 animate__animated animate__fadeIn"
                         data-aos="fade-up">
                         <li><strong>Primary Education:</strong> Izyira primary school, [2009-2015]</li>
                         <li><strong>Ordinary Level:</strong> Iwiji Secondary school, [2016-2019]</li>
                         <li><strong>Advanced Level:</strong> Njombe high school, [2020-2022]</li>
-                        <li><strong>University:</strong> University Of Dodoma(Udom), Bachelor of science in software engineering, [2022-2026]</li>
+                        <li><strong>University:</strong> University Of Dodoma(Udom), Bachelor of science in software
+                            engineering, [2022-2026]</li>
                     </ul>
                 </div>
 
                 <!-- Skills -->
                 <div class="md:w-1/2 mb-8 md:pl-4">
-                    <h3 class="text-2xl font-semibold mb-4 animate__animated animate__fadeIn text-default" data-aos="fade-up">Skills
+                    <h3 class="text-2xl font-semibold mb-4 animate__animated animate__fadeIn text-default"
+                        data-aos="fade-up">Skills
                     </h3>
                     <p class="text-gray-700 animate__animated animate__fadeIn" data-aos="fade-up">
                         I possess a variety of skills that I have developed over the years. These include:
                     </p>
                     <ul class="list-disc list-inside text-gray-700 animate__animated animate__fadeIn"
                         data-aos="fade-up">
-                        <li><strong>Technical Skills:</strong> Python/Django Developer (GraphQL & REST API), Java Developer (Spring Boot, JavaFX),
-                            Angular, Flutter, React, Vue, Machine Learning, Artificial Intelligence, Neural Networks, NLP (Natural Language Processing) and web security
+                        <li><strong>Technical Skills:</strong> Python/Django Developer (GraphQL & REST API), Java
+                            Developer (Spring Boot, JavaFX),
+                            Angular, Flutter, React, Vue, Machine Learning, Artificial Intelligence, Neural Networks,
+                            NLP (Natural Language Processing) and web security
                         </li>
-                        <li><strong>Soft Skills:</strong> Problem-Solving, Team Collaboration, Communication, Adaptability, Time Management</li>
+                        <li><strong>Soft Skills:</strong> Problem-Solving, Team Collaboration, Communication,
+                            Adaptability, Time Management</li>
                         <li><strong>Languages:</strong> Swahili, English</li>
                     </ul>
                 </div>
             </div>
 
             <div class="mb-8">
-                <h3 class="text-2xl font-semibold mb-4 animate__animated animate__fadeIn text-default" data-aos="fade-left">Additional
+                <h3 class="text-2xl font-semibold mb-4 animate__animated animate__fadeIn text-default"
+                    data-aos="fade-left">Additional
                     Information</h3>
                 <p class="text-gray-700 animate__animated animate__fadeIn" data-aos="fade-left">
                     In addition to my education and skills, I am passionate about Agriculture. I believe in
-                    continuous learning and personal development, which drives me to afford various achievement of my interests.
+                    continuous learning and personal development, which drives me to afford various achievement of my
+                    interests.
                 </p>
             </div>
 
             <div>
-                <h3 class="text-2xl font-semibold mb-4 animate__animated animate__fadeIn text-default" data-aos="fade-right">Get in
+                <h3 class="text-2xl font-semibold mb-4 animate__animated animate__fadeIn text-default"
+                    data-aos="fade-right">Get in
                     Touch</h3>
                 <p class="text-gray-700 animate__animated animate__fadeIn" data-aos="fade-right">
-                    If you would like to connect with me, feel free to reach out via 
-                    <a class="text-blue-500" href="mailto:tarxemo@gmail.com">email</a> .I'm always open to new opportunities and collaborations!
+                    If you would like to connect with me, feel free to reach out via
+                    <a class="text-default" target="_blank" href="mailto:tarxemo@gmail.com">email</a> .I'm always open to new
+                    opportunities and collaborations!
                 </p>
             </div>
         </div>
@@ -285,7 +333,8 @@
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18v18H3V3z" />
                         </svg>
-                        <h3 class="text-2xl font-semibold mb-2animate__animated animate__fadeIn text-default" data-aos="fade-right">
+                        <h3 class="text-2xl font-semibold mb-2animate__animated animate__fadeIn text-default"
+                            data-aos="fade-right">
                             Web Development</h3>
                         <p class="text-gray-700">Building responsive and high-performance websites tailored to your
                             business needs. With any language prefered by client</p>
@@ -299,7 +348,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h16m-7 6h7" />
                         </svg>
-                        <h3 class="text-2xl font-semibold mb-2animate__animated animate__fadeIn text-default" data-aos="fade-right">
+                        <h3 class="text-2xl font-semibold mb-2animate__animated animate__fadeIn text-default"
+                            data-aos="fade-right">
                             Cloud Solutions</h3>
                         <p class="text-gray-700">Providing secure and scalable cloud solutions to enhance your business
                             agility.</p>
@@ -313,7 +363,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M13 10V3L4 14h7v7l9-11h-7z" />
                         </svg>
-                        <h3 class="text-2xl font-semibold mb-2 animate__animated animate__fadeIn text-default" data-aos="fade-right">
+                        <h3 class="text-2xl font-semibold mb-2 animate__animated animate__fadeIn text-default"
+                            data-aos="fade-right">
                             IT Consultancy</h3>
                         <p class="text-gray-700">Expert advice and strategies to optimize your IT infrastructure and
                             operations. Based on modern technologies</p>
@@ -324,80 +375,84 @@
     </section>
 
 
-  <!-- Testimonials Section -->
-<section id="testimonials" class="py-20 bg-gray-50 overflow-hidden w-fully">
-    <div class="container mx-auto text-center">
-        <h2 class="text-4xl font-bold text-gray-800 mb-12 animate__animated animate__fadeIn text-default" data-aos="fade-up">What
-            Clients Say</h2>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-50 overflow-hidden w-fully">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-12 animate__animated animate__fadeIn text-default"
+                data-aos="fade-up">What
+                Clients Say</h2>
 
-        <div class="flex flex-col md:flex-row justify-center">
-            <!-- Left Column -->
-            <div class="w-full md:w-1/2 p-4 flex" data-aos="fade-up" data-aos-delay="200">
-                <div class="bg-white rounded-lg shadow-lg p-6 animate__animated animate__fadeIn flex-grow"
-                    data-aos="fade-right">
-                    <p class="text-gray-600 italic animate__animated animate__fadeIn" data-aos="fade-left">"The IT
-                        services provided were exceptional! Highly recommend! The team's professionalism and
-                        attention to detail made the process seamless and enjoyable. I was impressed with their
-                        ability to understand my needs and deliver a customized solution that exceeded my
-                        expectations!"</p>
-
-                    <!-- Profile image and name -->
-                    <div class="flex items-center mt-4">
-                        <img loading="lazy" class="w-12 h-12 rounded-full mr-4" src="./images/martin.jpg" alt="Martin Sanga">
-                        <div>
-                            <h5 class="text-lg font-bold text-gray-800 animate__animated animate__fadeIn"
-                                data-aos="fade-left">Martin Sanga</h5>
-                            <p class="text-gray-500">CEO, Tech Innovations</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right Column -->
-            <div class="w-full md:w-1/2 p-4">
-                <div class="flex flex-col" data-aos="fade-up" data-aos-delay="400">
-                    <!-- First Testimonial -->
-                    <div class="bg-white rounded-lg shadow-lg p-6 mb-4 animate__animated animate__fadeIn"
-                        data-aos="fade-left">
-                        <p class="text-gray-600 italic animate__animated animate__fadeIn" data-aos="fade-right">"An
-                            amazing experience! The team was professional and delivered on time."</p>
+            <div class="flex flex-col md:flex-row justify-center">
+                <!-- Left Column -->
+                <div class="w-full md:w-1/2 p-4 flex" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-white rounded-lg shadow-lg p-6 animate__animated animate__fadeIn flex-grow"
+                        data-aos="fade-right">
+                        <p class="text-gray-600 italic animate__animated animate__fadeIn" data-aos="fade-left">"The IT
+                            services provided were exceptional! Highly recommend! The team's professionalism and
+                            attention to detail made the process seamless and enjoyable. I was impressed with their
+                            ability to understand my needs and deliver a customized solution that exceeded my
+                            expectations!"</p>
 
                         <!-- Profile image and name -->
                         <div class="flex items-center mt-4">
-                            <img loading="lazy" class="w-12 h-12 rounded-full mr-4" src="./images/asha.jpeg" alt="Dorece Makuhana">
+                            <img loading="lazy" class="w-12 h-12 rounded-full mr-4" src="./images/martin.jpg"
+                                alt="Martin Sanga">
                             <div>
                                 <h5 class="text-lg font-bold text-gray-800 animate__animated animate__fadeIn"
-                                    data-aos="fade-right">Ashura Smith</h5>
-                                <p class="text-gray-500">Founder, Creative Solutions</p>
+                                    data-aos="fade-left">Martin Sanga</h5>
+                                <p class="text-gray-500">CEO, Tech Innovations</p>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Second Testimonial -->
-                    <div class="bg-white rounded-lg shadow-lg p-6 animate__animated animate__fadeIn"
-                        data-aos="fade-left">
-                        <p class="text-gray-600 italic">"They helped us streamline our processes and improve our
-                            efficiency!"</p>
+                <!-- Right Column -->
+                <div class="w-full md:w-1/2 p-4">
+                    <div class="flex flex-col" data-aos="fade-up" data-aos-delay="400">
+                        <!-- First Testimonial -->
+                        <div class="bg-white rounded-lg shadow-lg p-6 mb-4 animate__animated animate__fadeIn"
+                            data-aos="fade-left">
+                            <p class="text-gray-600 italic animate__animated animate__fadeIn" data-aos="fade-right">"An
+                                amazing experience! The team was professional and delivered on time."</p>
 
-                        <!-- Profile image and name -->
-                        <div class="flex items-center mt-4">
-                            <img loading="lazy" class="w-12 h-12 rounded-full mr-4" src="./images/greygory.jpg" alt="Greygory">
-                            <div>
-                                <h5 class="text-lg font-bold text-gray-800 animate__animated animate__fadeIn"
-                                    data-aos="fade-right">Greygory Sulle</h5>
-                                <p class="text-gray-500">Project Manager, Global Corp</p>
+                            <!-- Profile image and name -->
+                            <div class="flex items-center mt-4">
+                                <img loading="lazy" class="w-12 h-12 rounded-full mr-4" src="./images/asha.jpeg"
+                                    alt="Dorece Makuhana">
+                                <div>
+                                    <h5 class="text-lg font-bold text-gray-800 animate__animated animate__fadeIn"
+                                        data-aos="fade-right">Ashura Smith</h5>
+                                    <p class="text-gray-500">Founder, Creative Solutions</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Second Testimonial -->
+                        <div class="bg-white rounded-lg shadow-lg p-6 animate__animated animate__fadeIn"
+                            data-aos="fade-left">
+                            <p class="text-gray-600 italic">"They helped us streamline our processes and improve our
+                                efficiency!"</p>
+
+                            <!-- Profile image and name -->
+                            <div class="flex items-center mt-4">
+                                <img loading="lazy" class="w-12 h-12 rounded-full mr-4" src="./images/greygory.jpg"
+                                    alt="Greygory">
+                                <div>
+                                    <h5 class="text-lg font-bold text-gray-800 animate__animated animate__fadeIn"
+                                        data-aos="fade-right">Greygory Sulle</h5>
+                                    <p class="text-gray-500">Project Manager, Global Corp</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
-<!-- 
+    <!-- 
     <section id="projects" class="py-12 bg-gray-100 w-fully">
         <div class="container mx-auto px-6">
           <h2 class="text-3xl font-bold text-center text-gray-800 mb-12 animate-fadeIn">My Projects</h2>
@@ -493,117 +548,147 @@
         </div>
       </section> -->
 
-      
 
-      <section id="tech-stack" class="py-12 bg-white">
+
+    <section id="tech-stack" class="py-12 bg-white">
         <div class="container mx-auto px-6">
-          <h2 class="text-3xl font-bold text-center text-gray-800 mb-12 animate-fadeIn text-default">Technology Stack</h2>
-          <div class="flex flex-wrap justify-center gap-6">
-            
-            <!-- Technology 1 -->
-            <div class="bg-gray-100 shadow-md rounded-full px-6 py-4 flex items-center transform transition duration-500 hover:scale-105">
-              <img loading="lazy" class="w-10 h-10" src="./images/python.jpeg" alt="Python">
-              <span class="ml-4 text-xl text-gray-700">Python</span>
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12 animate-fadeIn text-default">Technology Stack
+            </h2>
+            <div class="flex flex-wrap justify-center gap-6">
+
+                <!-- Technology 1 -->
+                <div
+                    class="bg-gray-100 shadow-md rounded-full px-6 py-4 flex items-center transform transition duration-500 hover:scale-105">
+                    <img loading="lazy" class="w-10 h-10" src="./images/python.jpeg" alt="Python">
+                    <span class="ml-4 text-xl text-gray-700">Python</span>
+                </div>
+
+                <!-- Technology 2 -->
+                <div
+                    class="bg-gray-100 shadow-md rounded-full px-6 py-4 flex items-center transform transition duration-500 hover:scale-105">
+                    <img loading="lazy" class="w-10 h-10" src="./images/react.png" alt="React">
+                    <span class="ml-4 text-xl text-gray-700">React</span>
+                </div>
+                <div
+                    class="bg-gray-100 shadow-md rounded-full px-6 py-4 flex items-center transform transition duration-500 hover:scale-105">
+                    <img loading="lazy" class="w-10 h-10" src="./images/angular.jpeg" alt="Angular">
+                    <span class="ml-4 text-xl text-gray-700">Angular</span>
+                </div>
+                <div
+                    class="bg-gray-100 shadow-md rounded-full px-6 py-4 flex items-center transform transition duration-500 hover:scale-105">
+                    <img loading="lazy" class="w-10 h-10" src="./images/django.png" alt="Django">
+                    <span class="ml-4 text-xl text-gray-700">Django</span>
+                </div>
+                <div
+                    class="bg-gray-100 shadow-md rounded-full px-6 py-4 flex items-center transform transition duration-500 hover:scale-105">
+                    <img loading="lazy" class="w-10 h-10" src="./images/java.png" alt="Java">
+                    <span class="ml-4 text-xl text-gray-700">Java</span>
+                </div>
+                <div
+                    class="bg-gray-100 shadow-md rounded-full px-6 py-4 flex items-center transform transition duration-500 hover:scale-105">
+                    <img loading="lazy" class="w-10 h-10" src="./images/rest.png" alt="Rest">
+                    <span class="ml-4 text-xl text-gray-700">Rest</span>
+                </div>
+
+                <!-- Add more technologies with similar blocks -->
+
             </div>
-            
-            <!-- Technology 2 -->
-            <div class="bg-gray-100 shadow-md rounded-full px-6 py-4 flex items-center transform transition duration-500 hover:scale-105">
-              <img loading="lazy" class="w-10 h-10" src="./images/react.png" alt="React">
-              <span class="ml-4 text-xl text-gray-700">React</span>
-            </div>
-            <div class="bg-gray-100 shadow-md rounded-full px-6 py-4 flex items-center transform transition duration-500 hover:scale-105">
-              <img loading="lazy" class="w-10 h-10" src="./images/angular.jpeg" alt="Angular">
-              <span class="ml-4 text-xl text-gray-700">Angular</span>
-            </div>
-            <div  class="bg-gray-100 shadow-md rounded-full px-6 py-4 flex items-center transform transition duration-500 hover:scale-105">
-              <img loading="lazy" class="w-10 h-10" src="./images/django.png" alt="Django">
-              <span class="ml-4 text-xl text-gray-700">Django</span>
-            </div>
-            <div class="bg-gray-100 shadow-md rounded-full px-6 py-4 flex items-center transform transition duration-500 hover:scale-105">
-              <img loading="lazy" class="w-10 h-10" src="./images/java.png" alt="Java">
-              <span class="ml-4 text-xl text-gray-700">Java</span>
-            </div>
-            <div class="bg-gray-100 shadow-md rounded-full px-6 py-4 flex items-center transform transition duration-500 hover:scale-105">
-              <img loading="lazy" class="w-10 h-10" src="./images/rest.png" alt="Rest">
-              <span class="ml-4 text-xl text-gray-700">Rest</span>
-            </div>
-            
-            <!-- Add more technologies with similar blocks -->
-            
-          </div>
         </div>
-      </section>
-      
+    </section>
 
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-20 bg-gray-100 relative overflow-hidden w-full">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-8 text-[#0D7C66] animate__animated animate__fadeIn text-default"
+                data-aos="fade-up">
+                Get in Touch
+            </h2>
+            <p class="mb-12 text-lg text-center text-gray-700 animate__animated animate__fadeIn" data-aos="fade-up"
+                data-aos-delay="200">
+                We’d love to hear from you! Fill out the form below or reach out through our social media channels.
+            </p>
 
-<!-- Contact Us Section -->
-<!-- Contact Us Section -->
-<section id="contact" class="py-20 bg-gray-100 relative overflow-hidden w-fully">
-    <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center mb-8 text-[#0D7C66] animate__animated animate__fadeIn text-default" data-aos="fade-up">
-            Get in Touch
-        </h2>
-        <p class="mb-12 text-lg text-center text-gray-700 animate__animated animate__fadeIn" data-aos="fade-up" data-aos-delay="200">
-            We’d love to hear from you! Fill out the form below or reach out through our social media channels.
-        </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+                <!-- Contact Information -->
+                <div class="flex flex-col animate__animated animate__fadeIn" data-aos="fade-right">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-default">Contact Information</h3>
+                        <p class="text-gray-700 mb-4">
+                            Feel free to contact us for any inquiries or collaborations. We are always open to
+                            discussing new projects or creative ideas.
+                        </p>
+                        <ul class="list-disc list-inside text-gray-700 mb-4">
+                            <li><strong>Email:</strong> tarxemo@gmail.com
+                            </li>
+                            <li><strong>Phone:</strong> +255 (765) 106-833</li>
+                            <li><strong>Location:</strong> 259 Udom, Dodoma, Tanzania</li>
+                        </ul>
 
-        <div class="flex flex-col md:flex-row items-center md:items-start mb-8">
-            <!-- Contact Information -->
-            <div class="md:w-1/2 mb-8 md:pr-8 animate__animated animate__fadeIn" data-aos="fade-right">
-                <h3 class="text-2xl font-semibold mb-4 text-default">Contact Information</h3>
-                <p class="text-gray-700 mb-4">
-                    Feel free to contact us for any inquiries or collaborations. We are always open to discussing new projects or creative ideas.
-                </p>
-                <ul class="list-disc list-inside text-gray-700 mb-4">
-                    <li><strong>Email:</strong> tarxemo@gmail.com</li>
-                    <li><strong>Phone:</strong> +255 (765) 106-833</li>
-                    <li><strong>Location:</strong> 259 Udom, Dodoma, Tanzania</li>
-                </ul>
-                <p class="text-gray-700">
-                    Follow us on our social media platforms to stay updated with our latest news and events.
-                </p>
-                <div class="flex space-x-4 mt-4">
-                    <a href="https://www.facebook.com/profile.php?id=61550056881615" target="_blank" class="text-default hover:text-[#41B3A2] transition duration-300"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://x.com/AnaniaMtawa" target="_blank" class="text-default hover:text-[#41B3A2] transition duration-300"><i class="fab fa-twitter"></i></a>
-                    <a href="https://wa.me/255742106833" target="_blank" class="text-default hover:text-[#41B3A2] transition duration-300"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://linkedin.com/in/tar-xemo" target="_blank" class="text-default hover:text-[#41B3A2] transition duration-300"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/mtawaanania/" target="_blank" class="text-default hover:text-[#41B3A2] transition duration-300"><i class="fab fa-instagram"></i></a>
+                        <!-- Map Section -->
+                        <div class="mt-8 mb-8">
+                            <div class="w-full h-32 bg-gray-300 rounded overflow-hidden shadow-lg">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.377636167762!2d35.8116079!3d-6.217453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x184dfb76fcfdd397%3A0xe8f6d7ba23bf8829!2sCIVE%20STUDENS%20HOSTEL%20BLOCK%205!5e0!3m2!1sen!2stz!4v1234567890!5m2!1sen!2stz"
+                                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-700">
+                            Follow us on our social media platforms to stay updated with our latest news and events.
+                        </p>
+                        <div class="flex space-x-4 mt-4">
+                            <a href="https://www.facebook.com/profile.php?id=61550056881615" target="_blank"
+                                class="text-default hover:text-[#41B3A2] transition duration-300"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/AnaniaMtawa" target="_blank"
+                                class="text-default hover:text-[#41B3A2] transition duration-300"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="https://wa.me/255742106833" target="_blank"
+                                class="text-default hover:text-[#41B3A2] transition duration-300"><i
+                                    class="fab fa-whatsapp"></i></a>
+                            <a href="https://linkedin.com/in/tar-xemo"
+                                class="text-default hover:text-[#41B3A2] transition duration-300"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/mtawaanania/" target="_blank"
+                                class="text-default hover:text-[#41B3A2] transition duration-300"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="animate__animated animate__fadeInRight" data-aos="fade-left">
+                    <form class="bg-white rounded-lg shadow-lg p-8 h-full flex flex-col justify-between"
+                        data-aos="fade-up" data-aos-delay="400">
+                        <h3 class="text-2xl font-semibold mb-6 text-default">Send Me a Message</h3>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
+                            <input type="text" id="name"
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+                            <input type="email" id="email"
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
+                            <textarea id="message" rows="4"
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit bg-gray-400"
+                            class="bg-gray-500 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300 ease-in-out">
+                            Send Message
+                        </button>
+                    </form>
                 </div>
             </div>
-            
-            <!-- Contact Form -->
-            <div class="md:w-1/2 animate__animated animate__fadeInRight" data-aos="fade-left">
-                <form class="bg-white rounded-lg shadow-lg p-8" data-aos="fade-up" data-aos-delay="400">
-                    <h3 class="text-2xl font-semibold mb-6 text-default">Send Me a Message</h3>
-                    <div class="mb-4">
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
-                        <input type="text" id="name"
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            placeholder="Your Name" required>
-                    </div>
-                    <div class="mb-4">
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
-                        <input type="email" id="email"
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            placeholder="Your Email" required>
-                    </div>
-                    <div class="mb-4">
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
-                        <textarea id="message" rows="4"
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit bg-gray-400"
-                        class="bg-gray-500 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300 ease-in-out">
-                        Send Message
-                    </button>
-                </form>
-            </div>
         </div>
-    </div>
-</section>
-
-    <!-- Footer Section -->
+    </section>
 
     <!-- Footer Section -->
     <footer class="bg-gray-900 text-white py-10 w-fully">
@@ -626,7 +711,8 @@
                     <ul class="space-y-2">
                         <li><a href="#services"
                                 class="text-gray-400 hover:text-yellow-500 transition duration-300">Services</a></li>
-                        <li><a href="#about-me" class="text-gray-400 hover:text-yellow-500 transition duration-300">About
+                        <li><a href="#about-me"
+                                class="text-gray-400 hover:text-yellow-500 transition duration-300">About
                                 me</a></li>
                         <li><a href="#contact"
                                 class="text-gray-400 hover:text-yellow-500 transition duration-300">Contact</a></li>
@@ -661,53 +747,59 @@
             <div class="container mx-auto text-center">
                 <p class="text-gray-400">© 2024 IT Services. All rights reserved.</p>
                 <div class="flex justify-center space-x-4 mt-2">
-                    <a  href="https://www.facebook.com/profile.php?id=61550056881615" target="_blank" class="text-gray-400 hover:text-yellow-500 transition duration-300"><i
+                    <a href="https://www.facebook.com/profile.php?id=61550056881615" target="_blank"
+                        class="text-gray-400 hover:text-yellow-500 transition duration-300"><i
                             class="fab fa-facebook-f"></i></a>
-                    <a href="https://x.com/AnaniaMtawa" target="_blank" class="text-gray-400 hover:text-yellow-500 transition duration-300"><i
+                    <a href="https://x.com/AnaniaMtawa" target="_blank"
+                        class="text-gray-400 hover:text-yellow-500 transition duration-300"><i
                             class="fab fa-twitter"></i></a>
                     <a href="https://linkedin.com/in/tar-xemo" target="_blank" class="text-gray-400 hover:text-yellow-500 transition duration-300"><i
                             class="fab fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/255742106833" target="_blank" class="text-gray-400 hover:text-yellow-500 transition duration-300"><i
+                    <a href="https://wa.me/255742106833" target="_blank"
+                        class="text-gray-400 hover:text-yellow-500 transition duration-300"><i
                             class="fab fa-whatsapp"></i></a>
-                    <a  href="https://www.instagram.com/mtawaanania/" target="_blank"  class="text-gray-400 hover:text-yellow-500 transition duration-300"><i
+                    <a href="https://www.instagram.com/mtawaanania/" target="_blank"
+                        class="text-gray-400 hover:text-yellow-500 transition duration-300"><i
                             class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
     </footer>
 
-     
-<!-- Back to Top Button -->
-<a href="javascript:void(0);" id="back-to-top" class="hidden fixed z-50 bottom-10 left-10 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-    </svg>
-</a>
 
-<script>
-    // Scroll event to show/hide the button
-    window.onscroll = function() {
-      let button = document.getElementById('back-to-top');
-      // Show the button after scrolling 100px
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        button.classList.remove('hidden');
-        button.classList.add('visible', 'animate__fadeIn');
-      } else {
-        button.classList.remove('visible', 'animate__fadeIn');
-        button.classList.add('hidden');
-      }
-    };
-  
-    // Smooth scrolling when clicking the back to top button
-    document.getElementById('back-to-top').addEventListener('click', function() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'  // Smooth scrolling behavior
-      });
-    });
-  </script>
-  
-  
+    <!-- Back to Top Button -->
+    <a href="javascript:void(0);" id="back-to-top"
+        class="hidden fixed z-50 bottom-10 left-10 bg-default hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+    </a>
+
+    <script>
+        // Scroll event to show/hide the button
+        window.onscroll = function () {
+            let button = document.getElementById('back-to-top');
+            // Show the button after scrolling 100px
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                button.classList.remove('hidden');
+                button.classList.add('visible', 'animate__fadeIn');
+            } else {
+                button.classList.remove('visible', 'animate__fadeIn');
+                button.classList.add('hidden');
+            }
+        };
+
+        // Smooth scrolling when clicking the back to top button
+        document.getElementById('back-to-top').addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'  // Smooth scrolling behavior
+            });
+        });
+    </script>
+
+
     <script src="./js/aos.js"></script>
     <script src="./js/gsap.js"></script>
 
