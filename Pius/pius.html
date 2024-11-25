@@ -1,281 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pius Secondary School</title>
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- AOS (Animate On Scroll) CSS -->
+  <script src="./css/tailwind.css"></script>
   <link href="./css/aos.css" rel="stylesheet">
-
-  <!-- Animate.css for additional animations -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-  
-  <style>
-    /* Custom Tailwind styles */
-    @layer utilities {
-      .bg-primary {
-        background-color: #000B58;
-      }
-      .text-accent {
-        color: #FFE31A;
-      }
-      /* Custom Animations */
-      @keyframes fadeIn {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
-      }
-      @keyframes slideRight {
-        0% { transform: translateX(-100%); }
-        100% { transform: translateX(0); }
-      }
-      @keyframes slideLeft {
-        0% { transform: translateX(100%); }
-        100% { transform: translateX(0); }
-      }
-      /* Animation Classes */
-      .animate-fadeIn {
-        animation: fadeIn 1s ease-in-out;
-      }
-      .animate-slideRight {
-        animation: slideRight 0.5s ease-out;
-      }
-      .animate-slideLeft {
-        animation: slideLeft 0.5s ease-out;
-      }
-    }
-
-
-
-    /*Hero section*/
-    /* Hero Section Custom Styles */
-    .hero-image {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      object-fit: cover;
-    }
-
-    .hero-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #FFE31A;
-    }
-
-    .text-animation {
-      display: inline-block;
-      opacity: 0;
-      animation: writeText 4s steps(40) forwards;
-    }
-
-    @keyframes writeText {
-      0% {
-        width: 0;
-      }
-      100% {
-        width: 100%;
-      }
-    }
-      /* Smooth transitions for the navigation bar */
-      .transition-all {
-      transition: all 0.3s ease-in-out;
-    }
-
-    .hero-text {
-  position: absolute;
-  bottom: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  color: white;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
-}
-
-.text-animation {
-  font-size: 3rem;
-  font-weight: bold;
-}
-
-.description {
-  font-size: 1.5rem;
-  margin-top: 10px;
-}
-
-
-  </style>
-
-
-
-
-  <!-- Animate.css for text and carousel animations -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-
-  <!-- Slick Carousel (for the sliding images) -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <link href="./css/animate.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./js/navDropdown.js"></script>
+  <script src="./js/mibileNavigation.js"></script>
+  <link rel="stylesheet" href="./css/styles.css">
 
 </head>
+
 <body class="h-full bg-gray-100">
-
-
-
-
-
-
-
-
-
-
-<!-- Hero Section -->
-<section class="relative overflow-hidden w-full">
-  <!-- Slick Carousel -->
-  <div class="slick-carousel">
-    <!-- Integrity Slide -->
-    <div>
-      <img src="./images/adm-student.jpg" class="hero-image" alt="Core Value: Integrity">
-      <div class="hero-text">
-        <h2 class="text-[#000B58] text-animation animate__animated animate__fadeInDown">Integrity</h2>
-        <p class="text-[#FFE31A] description animate__animated animate__fadeInUp animate__delay-1s">
-          We uphold the highest standards of honesty and strong moral principles.
-        </p>
+  <section class="relative overflow-hidden w-full">
+    <!-- Slick Carousel -->
+    <div class="slick-carousel">
+      <!-- Integrity Slide -->
+      <div>
+        <img src="./images/adm-student.jpg" class="hero-image" alt="Core Value: Integrity">
+        <div class="hero-text">
+          <h2 class="text-[#000B58] text-animation animate__animated animate__fadeInDown">Integrity</h2>
+          <p class="text-[#FFE31A] description animate__animated animate__fadeInUp animate__delay-1s">
+            We uphold the highest standards of honesty and strong moral principles.
+          </p>
+        </div>
+      </div>
+      <!-- Excellence Slide -->
+      <div>
+        <img src="./images/administartion.jpg" class="hero-image" alt="Core Value: Excellence">
+        <div class="hero-text">
+          <h2 class="text-[#000B58] text-animation animate__animated animate__fadeInDown">Excellence</h2>
+          <p class="text-[#FFE31A] description animate__animated animate__fadeInUp animate__delay-1s">
+            Striving for outstanding achievements in everything we do.
+          </p>
+        </div>
+      </div>
+      <!-- Cooperation Slide -->
+      <div>
+        <img src="./images/class-rooms.jpg" class="hero-image" alt="Core Value: Cooperation">
+        <div class="hero-text">
+          <h2 class="text-animation animate__animated animate__fadeInDown">Cooperation</h2>
+          <p class="text-[#000B58] text-[#FFE31A] description animate__animated animate__fadeInUp animate__delay-1s">
+            Emphasizing teamwork and mutual support to achieve shared goals.
+          </p>
+        </div>
+      </div>
+      <!-- Innovation Slide -->
+      <div>
+        <img src="./images/parredy.jpg" class="hero-image" alt="Core Value: Innovation">
+        <div class="hero-text">
+          <h2 class="text-[#000B58] text-animation animate__animated animate__fadeInDown">Innovation</h2>
+          <p class="text-[#FFE31A] description animate__animated animate__fadeInUp animate__delay-1s">
+            Encouraging creativity and forward-thinking for sustainable growth.
+          </p>
+        </div>
+      </div>
+      <!-- Collaboration Slide -->
+      <div>
+        <img src="./images/pius-teacher.jpg" class="hero-image" alt="Core Value: Collaboration">
+        <div class="hero-text">
+          <h2 class="text-[#000B58] text-animation animate__animated animate__fadeInDown">Collaboration</h2>
+          <p class="text-[#FFE31A] description animate__animated animate__fadeInUp animate__delay-1s">
+            Working together to foster inclusive and productive partnerships.
+          </p>
+        </div>
+      </div>
+      <!-- Unity Slide -->
+      <div>
+        <img src="./images/student-study.jpg" class="hero-image" alt="Core Value: Unity">
+        <div class="hero-text">
+          <h2 class="text-[#000B58] text-animation animate__animated animate__fadeInDown">Unity</h2>
+          <p class="text-[#FFE31A] description animate__animated animate__fadeInUp animate__delay-1s">
+            Promoting harmony and shared purpose within our community.
+          </p>
+        </div>
       </div>
     </div>
-    <!-- Excellence Slide -->
-    <div>
-      <img src="./images/administartion.jpg" class="hero-image" alt="Core Value: Excellence">
-      <div class="hero-text">
-        <h2 class="text-[#000B58] text-animation animate__animated animate__fadeInDown">Excellence</h2>
-        <p class="text-[#FFE31A] description animate__animated animate__fadeInUp animate__delay-1s">
-          Striving for outstanding achievements in everything we do.
-        </p>
-      </div>
-    </div>
-    <!-- Cooperation Slide -->
-    <div>
-      <img src="./images/class-rooms.jpg" class="hero-image" alt="Core Value: Cooperation">
-      <div class="hero-text">
-        <h2 class="text-animation animate__animated animate__fadeInDown">Cooperation</h2>
-        <p class="text-[#000B58] text-[#FFE31A] description animate__animated animate__fadeInUp animate__delay-1s">
-          Emphasizing teamwork and mutual support to achieve shared goals.
-        </p>
-      </div>
-    </div>
-    <!-- Innovation Slide -->
-    <div>
-      <img src="./images/parredy.jpg" class="hero-image" alt="Core Value: Innovation">
-      <div class="hero-text">
-        <h2 class="text-[#000B58] text-animation animate__animated animate__fadeInDown">Innovation</h2>
-        <p class="text-[#FFE31A] description animate__animated animate__fadeInUp animate__delay-1s">
-          Encouraging creativity and forward-thinking for sustainable growth.
-        </p>
-      </div>
-    </div>
-    <!-- Collaboration Slide -->
-    <div>
-      <img src="./images/pius-teacher.jpg" class="hero-image" alt="Core Value: Collaboration">
-      <div class="hero-text">
-        <h2 class="text-[#000B58] text-animation animate__animated animate__fadeInDown">Collaboration</h2>
-        <p class="text-[#FFE31A] description animate__animated animate__fadeInUp animate__delay-1s">
-          Working together to foster inclusive and productive partnerships.
-        </p>
-      </div>
-    </div>
-    <!-- Unity Slide -->
-    <div>
-      <img src="./images/student-study.jpg" class="hero-image" alt="Core Value: Unity">
-      <div class="hero-text">
-        <h2 class="text-[#000B58] text-animation animate__animated animate__fadeInDown">Unity</h2>
-        <p class="text-[#FFE31A] description animate__animated animate__fadeInUp animate__delay-1s">
-          Promoting harmony and shared purpose within our community.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
 
   <!-- Navigation Bar -->
-  <nav id="navbar" class="fixed w-full z-50 top-0 left-0 transition-all">
-    <!-- Transparent Nav -->
-    <div id="transparent-nav" class="bg-transparent text-white px-6 py-4 transition-all">
-      <ul class="flex justify-around space-x-4">
-        <li><a href="#about" class="hover:underline">About</a></li>
-        <li><a href="#services" class="hover:underline">Services</a></li>
-        <li><a href="#contact" class="hover:underline">Contact</a></li>
+  <nav id="navbar" class="fixed w-full z-50 top-0 left-0 transition-all bg-transparent">
+
+
+    <div class="hidden md:flex justify-between items-center px-6 py-4 bg-transparent text-white">
+      <div class="logo">
+        <img src="./images/download.jpeg" alt="Logo" class="h-12">
+      </div>
+      <ul class="flex space-x-6">
+        <!-- About Section -->
+        <li class="group relative">
+          <a href="#about" class="hover:underline text-2xl text-white hover:text-[#000B58] flex items-center">
+            About
+            <i class="ml-1 fas fa-chevron-right transform group-hover:rotate-90 transition-transform duration-300"></i>
+          </a>
+          <ul
+            class="absolute hidden group-hover:flex flex-col bg-white text-black shadow-lg rounded-lg p-4 space-y-2 w-[250px] transition-all duration-300"
+            style="top: 40px; left: clamp(0px, 50%, calc(100% - 250px));">
+            <li class="flex items-center justify-between hover:bg-gray-200 px-4 py-3 rounded-md">
+              <i class="fas fa-arrow-right text-gray-400 mr-2"></i>
+              <a href="#our-team" class="w-full">Our Team</a>
+            </li>
+            <li class="flex items-center justify-between hover:bg-gray-200 px-4 py-3 rounded-md">
+              <i class="fas fa-arrow-right text-gray-400 mr-2"></i>
+              <a href="#mission" class="w-full">Mission</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Services Section -->
+        <div class="group relative">
+          <a href="#services" class="hover:underline text-2xl flex text-white hover:text-[#000B58] items-center">
+            Services
+            <i class="ml-1 fas fa-chevron-right transform group-hover:rotate-90 transition-transform duration-300"></i>
+          </a>
+          <div
+            class="dropdown absolute hidden group-hover:grid grid-cols-2 bg-white text-black shadow-lg rounded-lg p-4 gap-4 w-[400px] transition-all duration-300"
+            style="top: 30px;">
+            <div class="flex items-center justify-between hover:bg-gray-200 px-4 py-3 rounded-md">
+              <i class="fas fa-arrow-right text-gray-400 mr-2"></i>
+              <a href="#web-dev" class="w-full">Web Development</a>
+            </div>
+            <div class="flex items-center justify-between hover:bg-gray-200 px-4 py-3 rounded-md">
+              <i class="fas fa-arrow-right text-gray-400 mr-2"></i>
+              <a href="#mobile-dev" class="w-full">Mobile Development</a>
+            </div>
+            <div class="flex items-center justify-between hover:bg-gray-200 px-4 py-3 rounded-md">
+              <i class="fas fa-arrow-right text-gray-400 mr-2"></i>
+              <a href="#ui-ux" class="w-full">UI/UX Design</a>
+            </div>
+            <div class="flex items-center justify-between hover:bg-gray-200 px-4 py-3 rounded-md">
+              <i class="fas fa-arrow-right text-gray-400 mr-2"></i>
+              <a href="#data-sci" class="w-full">Data Science</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Section -->
+        <li>
+          <a href="#contact" class="hover:underline text-2xl text-white hover:text-[#000B58]">Contact</a>
+        </li>
       </ul>
     </div>
 
-    <!-- Scrolled Nav -->
-    <div id="scrolled-nav" class="hidden bg-gray-100 text-[#000B58] px-6 py-6 transition-all shadow-lg">
-      <div class="flex justify-around items-center">
-        <div class="flex items-center">
-          <img src="./images/download.jpeg" alt="Logo" class="h-16">
+
+    <!-- Mobile Toggle -->
+    <div class="md:hidden flex justify-between items-center px-6 py-4 bg-[#000B58] text-white">
+      <div class="logo">
+        <img src="./images/download.jpeg" alt="Logo" class="h-10">
+      </div>
+      <button id="mobile-menu-toggle" class="text-2xl hover:text-[#FFE32A] transition duration-300">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Sidebar -->
+    <div id="mobile-sidebar"
+      class="hidden fixed top-0 left-0 w-full h-full bg-white z-50 shadow-lg transform -translate-x-full transition-transform duration-500">
+      <!-- Main Sidebar -->
+      <div id="main-sidebar" class="p-4 bg-[#000B58] text-white h-full">
+        <div class="flex justify-between items-center">
+          <h2 class="text-xl font-bold">Menu</h2>
+          <button id="sidebar-close" class="text-2xl hover:text-[#FFE32A] transition duration-300">
+            <i class="fas fa-times"></i>
+          </button>
         </div>
-        <ul class="flex space-x-4 justify-betweend">
-          <li><a href="#about" class="hover:text-[#FFE31A]">About</a></li>
-          <li><a href="#services" class="hover:text-[#FFE31A]">Services</a></li>
-          <li><a href="#contact" class="hover:text-[#FFE31A]">Contact</a></li>
+        <ul class="mt-10 space-y-6 text-lg">
+          <li class="flex justify-between items-center group">
+            <span>About</span>
+            <button class="dropdown-toggle text-xl text-white group-hover:text-[#FFE32A] transition duration-300">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </li>
+          <li class="flex justify-between items-center group">
+            <span>Services</span>
+            <button class="dropdown-toggle text-xl text-white group-hover:text-[#FFE32A] transition duration-300">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </li>
+          <li class="group">
+            <a href="#contact" class="text-white group-hover:text-[#FFE32A] transition duration-300">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Dropdown Sidebar -->
+      <div id="dropdown-sidebar" class="hidden p-4 bg-[#000B58] text-white h-full">
+        <div class="flex justify-between items-center mb-4">
+          <button id="dropdown-back" class="text-xl hover:text-[#FFE32A] transition duration-300">
+            <i class="fas fa-arrow-left"></i> Back
+          </button>
+          <h2 class="text-xl font-bold">Submenu</h2>
+        </div>
+        <ul class="space-y-6 text-lg">
+          <li>
+            <a href="#sub-link-1" class="hover:text-[#FFE32A] transition duration-300">Dropdown Item 1</a>
+          </li>
+          <li>
+            <a href="#sub-link-2" class="hover:text-[#FFE32A] transition duration-300">Dropdown Item 2</a>
+          </li>
         </ul>
       </div>
     </div>
+
   </nav>
 
-  <script>
-    const navbar = document.getElementById('navbar');
-    const transparentNav = document.getElementById('transparent-nav');
-    const scrolledNav = document.getElementById('scrolled-nav');
-
-    let lastScrollY = window.scrollY;
-
-    window.addEventListener('scroll', () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY === 0) {
-        // Back to top
-        transparentNav.classList.remove('hidden');
-        scrolledNav.classList.add('hidden');
-      } else if (currentScrollY > lastScrollY) {
-        // Scrolling down
-        navbar.style.top = '-100px';
-      } else {
-        // Scrolling up
-        navbar.style.top = '0';
-        transparentNav.classList.add('hidden');
-        scrolledNav.classList.remove('hidden');
-      }
-
-      lastScrollY = currentScrollY;
-    });
-  </script>
-
-
-
-
-
-
-
-
-
-
- 
-
+  <!-- Include Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
   <!-- JavaScript for Slick Carousel and Animations -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  
+
   <script>
     // Initialize Slick Carousel for Hero Section
-    $(document).ready(function(){
+    $(document).ready(function () {
       $('.slick-carousel').slick({
         autoplay: true,
         autoplaySpeed: 3000,
@@ -287,7 +235,7 @@
     });
 
     // Add Animation for Text after Carousel Transition
-    $(document).on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    $(document).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
       // Reset text animation by removing the class and re-adding it
       var currentText = $(slick.$slides[nextSlide]).find('.text-animation');
       currentText.removeClass('animate__animated animate__fadeIn');
@@ -303,17 +251,18 @@
 
 
 
-<!-- Main Content Section -->
-<!-- Main Content Section -->
-<section class="py-20 bg-[#F5F5F5]" id="main-content">
+  <!-- Main Content Section -->
+  <!-- Main Content Section -->
+  <section class="py-20 bg-[#F5F5F5]" id="main-content">
     <div class="container mx-auto px-6 md:px-12">
-  
+
       <!-- Core Values Section -->
       <div class="text-center mb-16">
         <h2 class="text-3xl font-semibold text-[#000B58] mb-4">Our Core Values</h2>
-        <p class="text-lg text-gray-700">At Pius Secondary School, we value the following principles that guide our educational journey.</p>
+        <p class="text-lg text-gray-700">At Pius Secondary School, we value the following principles that guide our
+          educational journey.</p>
       </div>
-  
+
       <!-- Core Values Cards -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
         <!-- Core Value 1 -->
@@ -321,29 +270,32 @@
           <div class="text-center">
             <i class="fas fa-users text-4xl text-[#FFE31A] mb-4"></i>
             <h3 class="text-xl font-semibold text-[#000B58] mb-2">Community</h3>
-            <p class="text-gray-600">We foster a strong sense of community within our school, encouraging teamwork, collaboration, and respect.</p>
+            <p class="text-gray-600">We foster a strong sense of community within our school, encouraging teamwork,
+              collaboration, and respect.</p>
           </div>
         </div>
-  
+
         <!-- Core Value 2 -->
         <div class="card bg-white p-6 rounded-lg shadow-lg">
           <div class="text-center">
             <i class="fas fa-book-open text-4xl text-[#FFE31A] mb-4"></i>
             <h3 class="text-xl font-semibold text-[#000B58] mb-2">Academic Excellence</h3>
-            <p class="text-gray-600">We strive to provide the highest quality education and ensure academic excellence for every student.</p>
+            <p class="text-gray-600">We strive to provide the highest quality education and ensure academic excellence
+              for every student.</p>
           </div>
         </div>
-  
+
         <!-- Core Value 3 -->
         <div class="card bg-white p-6 rounded-lg shadow-lg">
           <div class="text-center">
             <i class="fas fa-people-carry text-4xl text-[#FFE31A] mb-4"></i>
             <h3 class="text-xl font-semibold text-[#000B58] mb-2">Leadership</h3>
-            <p class="text-gray-600">We prepare our students to be the leaders of tomorrow, fostering critical thinking, innovation, and independence.</p>
+            <p class="text-gray-600">We prepare our students to be the leaders of tomorrow, fostering critical thinking,
+              innovation, and independence.</p>
           </div>
         </div>
       </div>
-  
+
       <!-- About the School Section -->
       <div class="flex flex-col md:flex-row items-center mb-20">
         <div class="w-full md:w-1/2 mb-6 md:mb-0">
@@ -351,17 +303,22 @@
         </div>
         <div class="w-full md:w-1/2 md:pl-12">
           <h3 class="text-2xl font-semibold text-[#000B58] mb-4">About Pius Secondary School</h3>
-          <p class="text-lg text-gray-700 mb-4">Pius Secondary School is committed to providing high-quality education based on the curriculum set by the Ministry of Education and Vocational Training. Our mission is to nurture future leaders who excel academically, socially, and emotionally.</p>
-          <p class="text-lg text-gray-700">Located in Kongowe Mwisho (Mbagala), we offer both O-Level and A-Level education with a focus on comprehensive development through diverse extracurricular activities and academic rigor.</p>
+          <p class="text-lg text-gray-700 mb-4">Pius Secondary School is committed to providing high-quality education
+            based on the curriculum set by the Ministry of Education and Vocational Training. Our mission is to nurture
+            future leaders who excel academically, socially, and emotionally.</p>
+          <p class="text-lg text-gray-700">Located in Kongowe Mwisho (Mbagala), we offer both O-Level and A-Level
+            education with a focus on comprehensive development through diverse extracurricular activities and academic
+            rigor.</p>
         </div>
       </div>
-  
+
       <!-- Contact Information Section -->
       <div class="text-center mb-16">
         <h2 class="text-3xl font-semibold text-[#000B58] mb-4">Get in Touch</h2>
-        <p class="text-lg text-gray-700">Reach out to us for any inquiries, or if you would like to schedule a visit.</p>
+        <p class="text-lg text-gray-700">Reach out to us for any inquiries, or if you would like to schedule a visit.
+        </p>
       </div>
-  
+
       <!-- Contact Cards -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         <!-- Contact Card 1 -->
@@ -373,40 +330,45 @@
             <p class="text-gray-600">(+255) 779 417 190</p>
           </div>
         </div>
-  
+
         <!-- Contact Card 2 -->
         <div class="card bg-white p-6 rounded-lg shadow-lg">
           <div class="text-center">
             <i class="fas fa-envelope text-4xl text-[#FFE31A] mb-4"></i>
             <h3 class="text-xl font-semibold text-[#000B58] mb-2">Email Us</h3>
-            <p class="text-gray-600"><a href="mailto:info@piussec.ac.tz" class="hover:text-[#FFE31A]">info@piussec.ac.tz</a></p>
+            <p class="text-gray-600"><a href="mailto:info@piussec.ac.tz"
+                class="hover:text-[#FFE31A]">info@piussec.ac.tz</a></p>
           </div>
         </div>
-  
+
         <!-- Contact Card 3 -->
         <div class="card bg-white p-6 rounded-lg shadow-lg">
           <div class="text-center">
             <i class="fas fa-map-marker-alt text-4xl text-[#FFE31A] mb-4"></i>
             <h3 class="text-xl font-semibold text-[#000B58] mb-2">Our Location</h3>
-            <p class="text-gray-600">Pius Secondary School, Kongowe Mwisho (Mbagala), Kigamboni Road, Dar es Salaam, Tanzania.</p>
+            <p class="text-gray-600">Pius Secondary School, Kongowe Mwisho (Mbagala), Kigamboni Road, Dar es Salaam,
+              Tanzania.</p>
           </div>
         </div>
       </div>
-  
+
       <!-- Call to Action Section -->
       <div class="text-center">
         <h3 class="text-2xl font-semibold text-[#000B58] mb-4">Ready to Join Us?</h3>
-        <p class="text-lg text-gray-700 mb-8">Become a part of the Pius Secondary School family. We are here to help you excel!</p>
-        <a href="#contact" class="bg-[#FFE31A] text-[#000B58] py-3 px-8 rounded-full text-lg font-semibold hover:bg-[#000B58] hover:text-white transition-colors duration-300">Contact Us</a>
+        <p class="text-lg text-gray-700 mb-8">Become a part of the Pius Secondary School family. We are here to help you
+          excel!</p>
+        <a href="#contact"
+          class="bg-[#FFE31A] text-[#000B58] py-3 px-8 rounded-full text-lg font-semibold hover:bg-[#000B58] hover:text-white transition-colors duration-300">Contact
+          Us</a>
       </div>
-  
+
     </div>
   </section>
-  
+
   <!-- AOS JS library for Scroll Animations -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       AOS.init({
         once: true,  // Trigger animations only once
         offset: 100, // Start animations a bit earlier for smoother effect
@@ -414,12 +376,11 @@
       });
     });
   </script>
-  
-  
+
+
   <!-- AOS JS library for Scroll Animations -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-  
 
 
 
@@ -428,19 +389,21 @@
 
 
 
-<!-- Footer Section -->
-<footer class="bg-[#000B58] text-white py-10">
+
+  <!-- Footer Section -->
+  <footer class="bg-[#000B58] text-white py-10">
     <div class="container mx-auto px-6 md:px-12">
       <!-- Footer Top: Logo, Links, and Contact Info -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        
+
         <!-- School Info Section -->
         <div class="flex flex-col items-center md:items-start">
           <img src="./images/pius_logo.png" alt="Pius Secondary School" class="w-32 mb-4">
           <p class="text-lg mb-4">Pius Secondary School</p>
-          <p class="text-sm">Located at Kongowe mwisho (Mbagala), along Mji-Mwema/Kigamboni Road. Just 1 km from the Kongowe Bus Terminal.</p>
+          <p class="text-sm">Located at Kongowe mwisho (Mbagala), along Mji-Mwema/Kigamboni Road. Just 1 km from the
+            Kongowe Bus Terminal.</p>
         </div>
-  
+
         <!-- Quick Links Section -->
         <div class="flex flex-col items-center md:items-start">
           <h3 class="text-lg font-semibold text-[#FFE31A] mb-4">Quick Links</h3>
@@ -452,16 +415,17 @@
             <li><a href="#" class="hover:text-[#FFE31A] transition-colors">Gallery</a></li>
           </ul>
         </div>
-  
+
         <!-- Contact Info Section -->
         <div class="flex flex-col items-center md:items-start">
           <h3 class="text-lg font-semibold text-[#FFE31A] mb-4">Contact Us</h3>
           <p class="text-sm mb-4">Phone: (+255) 754 617 352</p>
-          <p class="text-sm mb-4">Email: <a href="mailto:info@piussec.ac.tz" class="hover:text-[#FFE31A]">info@piussec.ac.tz</a></p>
+          <p class="text-sm mb-4">Email: <a href="mailto:info@piussec.ac.tz"
+              class="hover:text-[#FFE31A]">info@piussec.ac.tz</a></p>
         </div>
-  
+
       </div>
-  
+
       <!-- Footer Bottom: Social Icons and Copyright -->
       <div class="mt-8 border-t border-[#FFE31A] pt-6 flex flex-col items-center md:flex-row justify-between text-sm">
         <!-- Social Media Icons -->
@@ -476,16 +440,16 @@
             <i class="fab fa-instagram"></i>
           </a>
         </div>
-  
+
         <!-- Copyright Notice -->
         <p class="text-white">© 2024 Pius Secondary School. All rights reserved.</p>
       </div>
     </div>
   </footer>
-  
+
   <!-- Font Awesome (for social icons) -->
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  
+
 
 
 
@@ -495,31 +459,32 @@
 
   <!-- Font Awesome for icons -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
-  
+
   <!-- AOS JS -->
   <script src="./js/aos.js"></script>
 
   <script>
     // Initialize AOS (Animate on Scroll)
     AOS.init({
-        duration: 1800,
+      duration: 1800,
     });
 
     // Locomotive Scroll Initialization
     const scroll = new LocomotiveScroll({
-        el: document.querySelector('body'),
-        smooth: true
+      el: document.querySelector('body'),
+      smooth: true
     });
 
     // Floating shapes animation with GSAP
     gsap.to('.floating-icon', {
-        y: -20,
-        repeat: -1,
-        yoyo: true,
-        ease: "power1.inOut",
-        duration: 2,
+      y: -20,
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut",
+      duration: 2,
     });
-</script>
+  </script>
 
 </body>
+
 </html>
