@@ -53,11 +53,6 @@
   color: #FFE31A;
 }
 
-.text-animation {
-  display: inline-block;
-  opacity: 0;
-  animation: writeText 4s steps(40) forwards;
-}
 
 @keyframes writeText {
   0% {
