@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/footerNav.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/mibileNavigation.js"></script>
+    <script src="./js/navDropdown.js"></script>
+    <link href="./css/aos.css" rel="stylesheet">
+    <link href="./css/animate.css" rel="stylesheet">
+</head>
+
+<body class="bg-[#F5F5F5]">
+<div id="top-nav"></div>
+    <!-- Header -->
+
+    
+    
+        <!-- Results Section -->
+        <section id="results" class="py-24">
+            <div class="container mx-auto px-6 md:px-12">
+                <h2 class="text-2xl font-semibold text-[#022E51] text-center mb-12">Results Summary</h2>
+    
+                <!-- Tabs -->
+                <div class="overflow-hidden mb-8">
+                    <nav class="flex justify-around text-[#022E51] text-lg font-semibold py-4">
+                        <button onclick="showResults('pre-primary')" class="focus:outline-none underline focus:text-white focus:bg-[#022E51] px-6 transition-colors">Pre-Primary</button>
+                        <button onclick="showResults('ordinary-level')" class="focus:outline-none underline focus:text-white focus:bg-[#022E51] px-6 transition-colors">Ordinary Level</button>
+                        <button onclick="showResults('advanced-level')" class="focus:outline-none underline focus:text-white focus:bg-[#022E51] px-6 transition-colors">Advanced Level</button>
+                    </nav>
+                </div>
+    
+                <!-- Results Content -->
+                <div id="results-container">
+                    <!-- Pre-Primary Results -->
+                    <div id="pre-primary" class="results-content hidden">
+                        <h3 class="text-2xl font-semibold text-[#022E51] mb-4">Pre-Primary Results</h3>
+                        <div class="bg-white shadow-lg rounded-lg p-6">
+                            <table class="w-full text-left text-gray-600">
+                                <thead class="text-[#022E51]">
+                                    <tr>
+                                        <th class="py-3 px-4">Year</th>
+                                        <th class="py-3 px-4">Total Students</th>
+                                        <th class="py-3 px-4">Pass Rate (%)</th>
+                                        <th class="py-3 px-4">All results</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="py-3 px-4">2024</td>
+                                        <td class="py-3 px-4">120</td>
+                                        <td class="py-3 px-4">95%</td>
+                                        <td class="py-3 px-4 text-[#000B58] cursor-pointer hover:text-[#FFE31A]">
+                                            <a href=""><i class="fas fa-chevron-right pr-2"></i> All results</a>
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4">2023</td>
+                                        <td class="py-3 px-4">110</td>
+                                        <td class="py-3 px-4">92%</td>
+                                        <td class="py-3 px-4 text-[#000B58] cursor-pointer hover:text-[#FFE31A]">
+                                            <a href=""><i class="fas fa-chevron-right pr-2"></i> All results</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4">2022</td>
+                                        <td class="py-3 px-4">400</td>
+                                        <td class="py-3 px-4">88%</td>
+                                        <td class="py-3 px-4 text-[#000B58] cursor-pointer hover:text-[#FFE31A]">
+                                            <a href=""><i class="fas fa-chevron-right pr-2"></i> All results</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4">2021</td>
+                                        <td class="py-3 px-4">390</td>
+                                        <td class="py-3 px-4">85%</td>
+                                        <td class="py-3 px-4 text-[#000B58] cursor-pointer hover:text-[#FFE31A]">
+                                            <a href=""><i class="fas fa-chevron-right pr-2"></i> All results</a>
+                                        </td>
+                                    </tr>
+                                    <!-- Repeat for previous years -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+    
+                    <!-- Ordinary Level Results -->
+                    <div id="ordinary-level" class="results-content hidden">
+                        <h3 class="text-2xl font-semibold text-[#022E51] mb-4">Ordinary Level Results</h3>
+                        <div class="bg-white shadow-lg rounded-lg p-6">
+                            <table class="w-full text-left text-gray-600">
+                                <thead class="text-[#022E51]">
+                                    <tr>
+                                        <th class="py-3 px-4">Year</th>
+                                        <th class="py-3 px-4">Total Students</th>
+                                        <th class="py-3 px-4">Pass Rate (%)</th>
+                                        <th class="py-3 px-4">All results</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="py-3 px-4">2024</td>
+                                        <td class="py-3 px-4">400</td>
+                                        <td class="py-3 px-4">88%</td>
+                                        <td class="py-3 px-4 text-[#000B58] cursor-pointer hover:text-[#FFE31A]">
+                                            <a href=""><i class="fas fa-chevron-right pr-2"></i> All results</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4">2023</td>
+                                        <td class="py-3 px-4">390</td>
+                                        <td class="py-3 px-4">85%</td>
+                                        <td class="py-3 px-4 text-[#000B58] cursor-pointer hover:text-[#FFE31A]">
+                                            <a href=""><i class="fas fa-chevron-right pr-2"></i> All results</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4">2022</td>
+                                        <td class="py-3 px-4">300</td>
+                                        <td class="py-3 px-4">92%</td>
+                                        <td class="py-3 px-4 text-[#000B58] cursor-pointer hover:text-[#FFE31A]">
+                                            <a href=""><i class="fas fa-chevron-right pr-2"></i> All results</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4">2021</td>
+                                        <td class="py-3 px-4">280</td>
+                                        <td class="py-3 px-4">90%</td>
+                                        <td class="py-3 px-4 text-[#000B58] cursor-pointer hover:text-[#FFE31A]">
+                                            <a href=""><i class="fas fa-chevron-right pr-2"></i> All results</a>
+                                        </td>
+                                    </tr>
+                                    <!-- Repeat for previous years -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+    
+                    <!-- Advanced Level Results -->
+                    <div id="advanced-level" class="results-content hidden">
+                        <h3 class="text-2xl font-semibold text-[#022E51] mb-4">Advanced Level Results</h3>
+                        <div class="bg-white shadow-lg rounded-lg p-6">
+                            <table class="w-full text-left text-gray-600">
+                                <thead class="text-[#022E51]">
+                                    <tr>
+                                        <th class="py-3 px-4">Year</th>
+                                        <th class="py-3 px-4">Total Students</th>
+                                        <th class="py-3 px-4">Pass Rate (%)</th>
+                                        <th class="py-3 px-4">All results</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="py-3 px-4">2024</td>
+                                        <td class="py-3 px-4">300</td>
+                                        <td class="py-3 px-4">92%</td>
+                                        <td class="py-3 px-4 text-[#000B58] cursor-pointer hover:text-[#FFE31A]">
+                                            <a href=""><i class="fas fa-chevron-right pr-2"></i> All results</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4">2023</td>
+                                        <td class="py-3 px-4">280</td>
+                                        <td class="py-3 px-4">90%</td>
+                                        <td class="py-3 px-4 text-[#000B58] cursor-pointer hover:text-[#FFE31A]">
+                                            <a href=""><i class="fas fa-chevron-right pr-2"></i> All results</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4">2022</td>
+                                        <td class="py-3 px-4">400</td>
+                                        <td class="py-3 px-4">88%</td>
+                                        <td class="py-3 px-4 text-[#000B58] cursor-pointer hover:text-[#FFE31A]">
+                                            <a href=""><i class="fas fa-chevron-right pr-2"></i> All results</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4">2021</td>
+                                        <td class="py-3 px-4">390</td>
+                                        <td class="py-3 px-4">85%</td>
+                                        <td class="py-3 px-4 text-[#000B58] cursor-pointer hover:text-[#FFE31A]">
+                                            <a href=""><i class="fas fa-chevron-right pr-2"></i> All results</a>
+                                        </td>
+                                    </tr>
+                                    <!-- Repeat for previous years -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+
+    
+
+
+    
+<div id="footer"></div>
+<script src="./js/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+<script>
+    function showResults(tabId) {
+        const contents = document.querySelectorAll('.results-content');
+        contents.forEach(content => content.classList.add('hidden'));
+
+        const activeContent = document.getElementById(tabId);
+        activeContent.classList.remove('hidden');
+    }
+    // Show Pre-Primary tab by default
+    document.addEventListener('DOMContentLoaded', () => showResults('pre-primary'));
+</script>
+</body>
+
+</html>

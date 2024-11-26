@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/footerNav.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/mibileNavigation.js"></script>
+    <script src="./js/navDropdown.js"></script>
+    <link href="./css/aos.css" rel="stylesheet">
+    <link href="./css/animate.css" rel="stylesheet">
+</head>
+
+<body class="bg-[#F5F5F5]">
+    <div id="top-nav"></div>
+
+
+    <!-- Support Section -->
+    <section id="faq" class="py-24">
+        <div class="container mx-auto px-6 md:px-12">
+            <h2 class="text-2xl font-semibold text-[#022E51] text-center mb-12">Questions & Answers</h2>
+
+            <!-- Accordion for FAQs -->
+            <div class="bg-white shadow-lg rounded-lg p-6 space-y-4">
+                <!-- Single FAQ Item -->
+                <div class="border-b border-gray-200">
+                    <button class="w-full text-left text-xl font-semibold text-[#022E51] py-3 focus:outline-none" onclick="toggleFAQ(this)">
+                        How can I join Pius Secondary School?
+                    </button>
+                    <div class="hidden text-gray-600 pl-4 pr-2 pb-3">
+                        Joining Pius Secondary School is very simple. You have to first visit our school campus to collect your registration form if you are a new student. After returning a duly filled form, our staff will assess your application. If you meet minimum entry qualifications, you will be selected to join, and we will notify you by sending a joining instruction letter to the address you provided.
+                    </div>
+                </div>
+
+                <!-- Repeat for each FAQ -->
+                <div class="border-b border-gray-200">
+                    <button class="w-full text-left text-xl font-semibold text-[#022E51] py-3 focus:outline-none" onclick="toggleFAQ(this)">
+                        Do I need to pay all the money to join?
+                    </button>
+                    <div class="hidden text-gray-600 pl-4 pr-2 pb-3">
+                        No, you can pay by installment or in full, but before you leave, you need to clear all your dues to get certificates.
+                    </div>
+                </div>
+
+                <div class="border-b border-gray-200">
+                    <button class="w-full text-left text-xl font-semibold text-[#022E51] py-3 focus:outline-none" onclick="toggleFAQ(this)">
+                        Can I transfer from another school to Pius?
+                    </button>
+                    <div class="hidden text-gray-600 pl-4 pr-2 pb-3">
+                        Yes, there are chances for students transferring from other schools to our school. You will be assessed by our staff, and if you meet entry criteria, you will be allowed to join.
+                    </div>
+                </div>
+
+                <div class="border-b border-gray-200">
+                    <button class="w-full text-left text-xl font-semibold text-[#022E51] py-3 focus:outline-none" onclick="toggleFAQ(this)">
+                        Is Pius both O-level and A-level?
+                    </button>
+                    <div class="hidden text-gray-600 pl-4 pr-2 pb-3">
+                        Yes, we accommodate both O-level and A-level students.
+                    </div>
+                </div>
+
+                <div class="border-b border-gray-200">
+                    <button class="w-full text-left text-xl font-semibold text-[#022E51] py-3 focus:outline-none" onclick="toggleFAQ(this)">
+                        Is Pius a boarding or day scholar?
+                    </button>
+                    <div class="hidden text-gray-600 pl-4 pr-2 pb-3">
+                        Pius Secondary School is built on about 10 acres of land. We have enough hostels to accommodate any number of students. Pius secondary school is a boarding scholar only.
+                    </div>
+                </div>
+
+                <div class="border-b border-gray-200">
+                    <button class="w-full text-left text-xl font-semibold text-[#022E51] py-3 focus:outline-none" onclick="toggleFAQ(this)">
+                        What subjects are offered at O-level?
+                    </button>
+                    <div class="hidden text-gray-600 pl-4 pr-2 pb-3">
+                        Our school is based on the Tanzania Ministry of Education and Vocational Training curriculum. We offer all subjects directed by the ministry, including Civics, History, Geography, Kiswahili, English, Literature in English, Basic Mathematics, Physics, Chemistry, Biology, Commerce, Bookkeeping, and Information and Computer Studies (ICS).
+                    </div>
+                </div>
+
+                <div class="border-b border-gray-200">
+                    <button class="w-full text-left text-xl font-semibold text-[#022E51] py-3 focus:outline-none" onclick="toggleFAQ(this)">
+                        How can I reach Pius Secondary School?
+                    </button>
+                    <div class="hidden text-gray-600 pl-4 pr-2 pb-3">
+                        It is very easy. Pius is located at Kongowe Mwisho (Mbagala) along the Mji-mwema/Kigamboni road, about 1 kilometer from the Kongowe Mwisho bus terminal. It is well accessible using public or private transport. Call us at (255) 754 617 352, 779 417 190, or 655 817 190 for any support you may need.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        function toggleFAQ(button) {
+            const content = button.nextElementSibling;
+            content.classList.toggle('hidden');
+        }
+    </script>
+<div id="footer"></div>
+<script src="./js/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+
+</html>

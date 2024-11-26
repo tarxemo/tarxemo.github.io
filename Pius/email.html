@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Email</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/footerNav.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/mibileNavigation.js"></script>
+    <script src="./js/navDropdown.js"></script>
+    <link href="./css/aos.css" rel="stylesheet">
+    <link href="./css/animate.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="top-nav"></div>
+
+    <!-- Email Form Section -->
+    <section id="email" class="py-24">
+        <div class="container mx-auto px-6 md:px-12 max-w-3xl">
+            <h2 class="text-4xl font-semibold text-[#022E51] text-center mb-8">Send Us an Email</h2>
+            <p class="text-gray-700 text-center mb-12">
+                We value your feedback, inquiries, and any questions you might have. Please use the form below to send us an email. 
+                Our team will respond to you as soon as possible.
+            </p>
+
+            <!-- Email Form -->
+            <form class="bg-white shadow-lg rounded-lg p-8 space-y-6">
+                <!-- Name Field -->
+                <div>
+                    <label for="name" class="block text-lg font-medium text-[#022E51] mb-2">Your Name</label>
+                    <input type="text" id="name" placeholder="Enter your name"
+                        class="w-full border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#022E51]">
+                </div>
+
+                <!-- Email Field -->
+                <div>
+                    <label for="email" class="block text-lg font-medium text-[#022E51] mb-2">Your Email</label>
+                    <input type="email" id="email" placeholder="Enter your email"
+                        class="w-full border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#022E51]">
+                </div>
+
+                <!-- Subject Field -->
+                <div>
+                    <label for="subject" class="block text-lg font-medium text-[#022E51] mb-2">Subject</label>
+                    <input type="text" id="subject" placeholder="Enter the subject"
+                        class="w-full border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#022E51]">
+                </div>
+
+                <!-- Message Field -->
+                <div>
+                    <label for="message" class="block text-lg font-medium text-[#022E51] mb-2">Message</label>
+                    <textarea id="message" rows="5" placeholder="Write your message here..."
+                        class="w-full border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#022E51]"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button type="submit"
+                        class="bg-[#022E51] text-white px-6 py-3 rounded-lg text-lg font-medium hover:bg-[#00466F] transition-colors">
+                        Send Email
+                    </button>
+                </div>
+            </form>
+
+            <!-- Contact Information -->
+            <div class="mt-12 text-center">
+                <h3 class="text-2xl font-semibold text-[#022E51]">Other Ways to Reach Us</h3>
+                <p class="text-gray-700 mt-4">
+                    If you'd prefer, you can call us directly at 
+                    <span class="font-medium text-[#022E51]">(255) 754 617 352</span> 
+                    or email us at 
+                    <a href="mailto:info@piussecondary.com" class="text-[#022E51] hover:underline">info@piussecondary.com</a>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+    <script src="./js/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+</body>
+
+</html>

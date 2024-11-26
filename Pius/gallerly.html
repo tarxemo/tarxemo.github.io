@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gallery | Pius Schools</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./js/footerNav.js"></script>
     <link rel="stylesheet" href="./css/styles.css">
@@ -12,95 +12,99 @@
     <link href="./css/aos.css" rel="stylesheet">
     <link href="./css/animate.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-[#F5F5F5]">
+    <!-- Navigation bar -->
     <div id="top-nav"></div>
-    <div class="bg-[#F5F5F5] py-20" id="gallery-section">
+
+    <!-- Gallery Section -->
+    <section id="gallery-section" class="py-20">
         <div class="container mx-auto px-6 md:px-12">
-          <!-- Section Header -->
-          <div class="text-center mb-12">
-            <h1 class="text-4xl font-semibold text-[#000B58] mb-4">Gallery</h1>
-            <p class="text-lg text-gray-700">
-              Browse through highlights of our events and school activities. Use the navigation below to explore our gallery.
-            </p>
-          </div>
-      
-          <!-- Swiper Container -->
-          <div class="swiper-container">
-            <!-- Large Image Display -->
-            <div class="swiper swiper-main">
-                <div class="swiper-wrapper">
-                    <!-- Large Image Items -->
-                    <div class="swiper-slide flex justify-center items-center">
-                      <img src="./images/adm-student.jpg" alt="Event 1" class="w-1/2 rounded-lg shadow-lg">
-                    </div>
-                    <div class="swiper-slide flex justify-center items-center">
-                      <img src="./images/parredy.jpg" alt="Event 2" class="w-1/2 rounded-lg shadow-lg">
-                    </div>
-                    <div class="swiper-slide flex justify-center items-center">
-                      <img src="./images/picha5.jpg" alt="Event 3" class="w-1/2 rounded-lg shadow-lg">
-                    </div>
-                    <!-- Add more large images -->
-                  </div>
-                  
-      
-              <!-- Navigation Arrows -->
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <h1 class="text-2xl font-semibold text-[#000B58] mb-4">Gallery Highlights</h1>
+                <p class="text-lg text-gray-700">
+                    Explore memorable moments from our events, school activities, and student life. Click through to discover more.
+                </p>
             </div>
-      
-            <!-- Thumbnail Navigation -->
-            <div class="swiper swiper-thumbs mt-6">
-              <div class="swiper-wrapper">
-                <!-- Thumbnail Items -->
-                <div class="swiper-slide">
-                  <img src="./images/adm-student.jpg" alt="Thumbnail 1" class="rounded-md">
+
+            <!-- Gallery Navigation -->
+            <div class="swiper-container">
+                <!-- Main Image Display -->
+                <div class="swiper swiper-main">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide flex justify-center items-center">
+                            <img src="./images/adm-student.jpg" alt="Student Leadership Event" class="w-full rounded-lg shadow-lg transition-transform duration-500 hover:scale-105">
+                        </div>
+                        <div class="swiper-slide flex justify-center items-center">
+                            <img src="./images/parredy.jpg" alt="Parade Celebration" class="w-full rounded-lg shadow-lg transition-transform duration-500 hover:scale-105">
+                        </div>
+                        <div class="swiper-slide flex justify-center items-center">
+                            <img src="./images/picha5.jpg" alt="Science Fair" class="w-full rounded-lg shadow-lg transition-transform duration-500 hover:scale-105">
+                        </div>
+                        <!-- Additional images can be added here -->
+                    </div>
+
+                    <!-- Navigation Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
-                <div class="swiper-slide">
-                  <img src="./images/parredy.jpg" alt="Thumbnail 2" class="rounded-md">
+
+                <!-- Thumbnail Navigation -->
+                <div class="swiper swiper-thumbs mt-6">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./images/adm-student.jpg" alt="Event Thumbnail 1" class="rounded-md transition-all duration-300 transform hover:scale-110">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/parredy.jpg" alt="Event Thumbnail 2" class="rounded-md transition-all duration-300 transform hover:scale-110">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/picha5.jpg" alt="Event Thumbnail 3" class="rounded-md transition-all duration-300 transform hover:scale-110">
+                        </div>
+                        <!-- More thumbnails -->
+                    </div>
                 </div>
-                <div class="swiper-slide">
-                  <img src="./images/picha5.jpg" alt="Thumbnail 3" class="rounded-md">
-                </div>
-                <!-- Add more thumbnails -->
-              </div>
             </div>
-          </div>
         </div>
-      </div>
-      
-      <!-- Swiper.js CSS -->
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-      />
-      
-      <!-- Swiper.js Script -->
-      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-      
-      <!-- Initialize Swiper -->
-      <script>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+
+    <!-- Swiper.js Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
         document.addEventListener("DOMContentLoaded", function () {
-          const swiperThumbs = new Swiper(".swiper-thumbs", {
-            spaceBetween: 10,
-            slidesPerView: 4,
-            freeMode: true,
-            watchSlidesProgress: true,
-          });
-      
-          const swiperMain = new Swiper(".swiper-main", {
-            spaceBetween: 10,
-            navigation: {
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-            },
-            thumbs: {
-              swiper: swiperThumbs,
-            },
-          });
+            const swiperThumbs = new Swiper(".swiper-thumbs", {
+                spaceBetween: 10,
+                slidesPerView: 4,
+                freeMode: true,
+                watchSlidesProgress: true,
+            });
+
+            const swiperMain = new Swiper(".swiper-main", {
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                thumbs: {
+                    swiper: swiperThumbs,
+                },
+                loop: true, // Added loop to allow continuous navigation
+            });
         });
-      </script>
-      
-<div id="footer"></div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    </script>
+
+    <!-- Animation on Scroll (AOS) -->
+    <script src="./js/aos.js"></script>
+
+    <!-- Font Awesome Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 </body>
 </html>

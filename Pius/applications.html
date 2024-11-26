@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applications</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/footerNav.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/mibileNavigation.js"></script>
+    <script src="./js/navDropdown.js"></script>
+    <link href="./css/aos.css" rel="stylesheet">
+    <link href="./css/animate.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="top-nav"></div>
+
+    <section class="py-20 bg-[#F5F5F5]" id="applications-page">
+        <div class="container mx-auto px-6 md:px-12">
+            <!-- Page Header -->
+            <div class="text-center mb-16">
+                <h1 class="text-4xl font-semibold text-[#000B58] mb-4">Applications</h1>
+                <p class="text-lg text-gray-700">
+                    Learn about our application process, submit your application online, and find all the details about joining our school.
+                </p>
+            </div>
+
+            <!-- Application Information Section -->
+            <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Application Process -->
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <h2 class="text-2xl font-semibold text-[#000B58] mb-4">Application Process</h2>
+                    <p class="text-lg text-gray-700 mb-4">
+                        Applying to our school is straightforward:
+                    </p>
+                    <ol class="list-decimal list-inside text-lg text-gray-700 space-y-2">
+                        <li>Fill out the online application form.</li>
+                        <li>Submit required documents (e.g., transcripts, certificates).</li>
+                        <li>Attend an entrance examination or interview (if applicable).</li>
+                        <li>Receive admission confirmation.</li>
+                    </ol>
+                </div>
+
+                <!-- Application Requirements -->
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <h2 class="text-2xl font-semibold text-[#000B58] mb-4">Application Requirements</h2>
+                    <ul class="list-disc list-inside text-lg text-gray-700 space-y-2">
+                        <li>Completed application form.</li>
+                        <li>Copies of previous academic records.</li>
+                        <li>A recommendation letter (if applicable).</li>
+                        <li>Passport-sized photographs.</li>
+                    </ul>
+                </div>
+
+                <!-- Application Fees -->
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <h2 class="text-2xl font-semibold text-[#000B58] mb-4">Application Fees</h2>
+                    <p class="text-lg text-gray-700 mb-4">
+                        A non-refundable application fee is required to process your application. Please contact the school for the latest fee structure.
+                    </p>
+                </div>
+
+                <!-- Apply Online -->
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <h2 class="text-2xl font-semibold text-[#000B58] mb-4">Apply Online</h2>
+                    <p class="text-lg text-gray-700 mb-4">
+                        Use our simple and secure online form to submit your application. It's quick, convenient, and accessible from anywhere.
+                    </p>
+                    <a href="#application-form"
+                        class="bg-[#FFE31A] text-[#000B58] py-3 px-8 rounded-full text-lg font-semibold hover:bg-[#000B58] hover:text-white transition-colors duration-300">
+                        Apply Now
+                    </a>
+                </div>
+
+                <!-- Application Status -->
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <h2 class="text-2xl font-semibold text-[#000B58] mb-4">Check Application Status</h2>
+                    <p class="text-lg text-gray-700 mb-4">
+                        Already applied? Track your application status online using your application ID and email address.
+                    </p>
+                    <a href="#status-check"
+                        class="bg-[#FFE31A] text-[#000B58] py-3 px-8 rounded-full text-lg font-semibold hover:bg-[#000B58] hover:text-white transition-colors duration-300">
+                        Check Status
+                    </a>
+                </div>
+
+                <!-- FAQs -->
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <h2 class="text-2xl font-semibold text-[#000B58] mb-4">Frequently Asked Questions</h2>
+                    <p class="text-lg text-gray-700 mb-4">
+                        Have questions about the application process? Check out our FAQ section for quick answers.
+                    </p>
+                    <a href="#faq"
+                        class="bg-[#FFE31A] text-[#000B58] py-3 px-8 rounded-full text-lg font-semibold hover:bg-[#000B58] hover:text-white transition-colors duration-300">
+                        View FAQs
+                    </a>
+                </div>
+            </div>
+
+            <!-- Application Form Section -->
+            <div id="application-form" class="mt-16 bg-white shadow-lg rounded-lg p-6">
+                <h2 class="text-2xl font-semibold text-[#000B58] mb-4 text-center">Submit Your Application</h2>
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-lg font-semibold text-gray-700">Full Name</label>
+                        <input type="text" id="name" name="name" class="w-full border border-gray-300 rounded-lg p-3" placeholder="Enter your full name" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-lg font-semibold text-gray-700">Email</label>
+                        <input type="email" id="email" name="email" class="w-full border border-gray-300 rounded-lg p-3" placeholder="Enter your email" required>
+                    </div>
+                    <div>
+                        <label for="level" class="block text-lg font-semibold text-gray-700">Desired Level</label>
+                        <select id="level" name="level" class="w-full border border-gray-300 rounded-lg p-3" required>
+                            <option value="">Select Level</option>
+                            <option value="o-level">O-Level</option>
+                            <option value="a-level">A-Level</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="documents" class="block text-lg font-semibold text-gray-700">Upload Documents</label>
+                        <input type="file" id="documents" name="documents" class="w-full border border-gray-300 rounded-lg p-3" required>
+                    </div>
+                    <button type="submit" class="bg-[#FFE31A] text-[#000B58] py-3 px-8 rounded-full text-lg font-semibold hover:bg-[#000B58] hover:text-white transition-colors duration-300">
+                        Submit Application
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+    <script src="./js/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+
+</html>
