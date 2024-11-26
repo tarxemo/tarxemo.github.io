@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | Pius SChools</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./js/footerNav.js"></script>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/mibileNavigation.js"></script>
+  <script src="./js/navDropdown.js"></script>
+  <link href="./css/aos.css" rel="stylesheet">
+  <link href="./css/animate.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Slick Carousel -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+  <style>
+    .event-highlight {
+      border: 4px solid #FFE31A;
+      animation: pulse-border 1.5s infinite;
+    }
+
+    @keyframes pulse-border {
+      0% { border-color: #FFE31A; }
+      50% { border-color: #FFD700; }
+      100% { border-color: #FFE31A; }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+
+    <div id="top-nav"></div>
+
+<!-- Events Section -->
+<section class="container mx-auto py-24 px-4">
+  <h2 class="text-3xl font-bold text-center mb-6 text-[#000B58]">Upcoming Events</h2>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Event 1 -->
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <img src="./images/picha5.jpg" alt="Graduation Ceremony" class="w-full h-40 object-cover event-highlight">
+      <div class="p-4">
+        <h3 class="text-xl font-semibold text-[#000B58]">Graduation Ceremony</h3>
+        <p class="text-sm text-gray-600 mt-2">Celebrate the achievements of our students on <strong>December 15, 2024</strong>. Join us for an unforgettable day!</p>
+        <button class="mt-4 text-white bg-[#000B58] hover:bg-[#022E51] py-2 px-4 rounded-lg">
+          Learn More
+        </button>
+      </div>
+    </div>
+    
+    <!-- Event 2 -->
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <img src="./images/assembly-admn.jpg" alt="Applications Open" class="w-full h-40 object-cover">
+      <div class="p-4">
+        <h3 class="text-xl font-semibold text-[#000B58]">Applications Open</h3>
+        <p class="text-sm text-gray-600 mt-2">Admissions are open for the 2025 academic year. Apply by <strong>January 20, 2025</strong>.</p>
+        <button class="mt-4 text-white bg-[#000B58] hover:bg-[#022E51] py-2 px-4 rounded-lg">
+            <a href="./applications.html">Apply Now</a>
+        </button>
+      </div>
+    </div>
+
+    <!-- Event 3 -->
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <img src="./images/pius3.jpg" alt="Sports Day" class="w-full h-40 object-cover">
+      <div class="p-4">
+        <h3 class="text-xl font-semibold text-[#000B58]">Sports Day</h3>
+        <p class="text-sm text-gray-600 mt-2">An exciting day of fun and competition on <strong>March 10, 2025</strong>. Come and support your teams!</p>
+        <button class="mt-4 text-white bg-[#000B58] hover:bg-[#022E51] py-2 px-4 rounded-lg">
+          View Details
+        </button>
+      </div>
+    </div>
+
+    <!-- Additional Events -->
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <img src="./images/student-study.jpg" alt="Cultural Festival" class="w-full h-40 object-cover">
+      <div class="p-4">
+        <h3 class="text-xl font-semibold text-[#000B58]">Cultural Festival</h3>
+        <p class="text-sm text-gray-600 mt-2">Experience diverse cultures on <strong>April 25, 2025</strong>. A celebration of unity!</p>
+        <button class="mt-4 text-white bg-[#000B58] hover:bg-[#022E51] py-2 px-4 rounded-lg">
+          Learn More
+        </button>
+      </div>
+    </div>
+
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <img src="./images/secondary.jpeg" alt="Teachers Day" class="w-full h-40 object-cover event-highlight">
+      <div class="p-4">
+        <h3 class="text-xl font-semibold text-[#000B58]">Teachers' Day</h3>
+        <p class="text-sm text-gray-600 mt-2">Honoring our dedicated educators on <strong>October 5, 2024</strong>.</p>
+        <button class="mt-4 text-white bg-[#000B58] hover:bg-[#022E51] py-2 px-4 rounded-lg">
+          View Details
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer"></div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="./js/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+<script>
+  // Optional: Slick carousel or animations for events
+  $(document).ready(function(){
+    $('.slick-carousel').slick();
+  });
+</script>
+</body>
+</html>
