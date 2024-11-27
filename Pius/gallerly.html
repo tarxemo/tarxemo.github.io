@@ -100,8 +100,7 @@
 
     <!-- Swiper.js Script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
+    
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const swiperThumbs = new Swiper(".swiper-thumbs", {
@@ -110,7 +109,7 @@
                 freeMode: true,
                 watchSlidesProgress: true,
             });
-
+    
             const swiperMain = new Swiper(".swiper-main", {
                 spaceBetween: 10,
                 navigation: {
@@ -120,10 +119,15 @@
                 thumbs: {
                     swiper: swiperThumbs,
                 },
-                loop: true, // Added loop to allow continuous navigation
+                loop: true, // Enable continuous looping
+                autoplay: { // Add autoplay configuration
+                    delay: 5000, // Set delay to 5000ms (5 seconds)
+                    disableOnInteraction: false, // Continue autoplay after interaction
+                },
             });
         });
     </script>
+    
 
     <!-- Animation on Scroll (AOS) -->
     <script src="./js/aos.js"></script>
