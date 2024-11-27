@@ -92,6 +92,107 @@
         </div>
     </section>
 
+
+
+
+<!-- Video Gallery Section -->
+<section id="video-gallery-section" class="py-20">
+    <div class="container mx-auto px-6 md:px-12">
+        <!-- Section Header -->
+        <div class="text-justify mb-12">
+            <h1 class="text-2xl font-semibold text-[#000B58] mb-4">Video Highlights</h1>
+            <p class="text-lg text-gray-700">
+                Watch our featured videos showcasing events, school activities, and memorable moments. Click through to explore more.
+            </p>
+        </div>
+
+        <!-- Video Gallery Navigation -->
+        <div class="swiper-container">
+            <!-- Main Video Display -->
+            <div class="swiper swiper-video-main">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide flex justify-center items-center">
+                        <video controls class="w-full rounded-lg shadow-lg">
+                            <source src="../videos/background_video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="swiper-slide flex justify-center items-center">
+                        <video controls class="w-full rounded-lg shadow-lg">
+                            <source src="../videos/background_video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="swiper-slide flex justify-center items-center">
+                        <video controls class="w-full rounded-lg shadow-lg">
+                            <source src="../videos/background_video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <!-- Additional videos can be added here -->
+                </div>
+
+                <!-- Navigation Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <!-- Video Thumbnail Navigation -->
+            <div class="swiper swiper-video-thumbs mt-6">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <video muted class="rounded-md transition-all duration-300 transform hover:scale-110">
+                            <source src="../videos/background_video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="swiper-slide">
+                        <video muted class="rounded-md transition-all duration-300 transform hover:scale-110">
+                            <source src="../videos/background_video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="swiper-slide">
+                        <video muted class="rounded-md transition-all duration-300 transform hover:scale-110">
+                            <source src="../videos/background_video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <!-- More video thumbnails -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Video Thumbnails Swiper
+        const swiperVideoThumbs = new Swiper(".swiper-video-thumbs", {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+
+        // Main Video Swiper
+        const swiperVideoMain = new Swiper(".swiper-video-main", {
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: swiperVideoThumbs,
+            },
+            loop: true, // Enable continuous looping
+        });
+    });
+</script>
+
+
+
+
+
+
+
     <!-- Footer -->
     <div id="footer"></div>
 
@@ -100,7 +201,7 @@
 
     <!-- Swiper.js Script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const swiperThumbs = new Swiper(".swiper-thumbs", {
