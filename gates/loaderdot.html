@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotating Loader</title>
+  <style>
+    /* Styling the loader container */
+    .loader-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      background-color: transparent;
+    }
+
+    /* Loader Wrapper */
+    .loader {
+      position: relative;
+      width: 100px;
+      height: 100px;
+    }
+
+    /* Rotating Dots */
+    .dot {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 15px;
+      height: 15px;
+      background-color: green;
+      border-radius: 50%;
+      transform-origin: -40px;
+      animation: rotate 1.5s infinite linear, scalePulse 1.5s infinite ease-in-out;
+    }
+
+    /* Positioning dots in a circular pattern */
+    .dot:nth-child(1) {
+      transform: rotate(0deg) translate(40px) scale(0.8);
+      animation-delay: 0s;
+    }
+
+    .dot:nth-child(2) {
+      transform: rotate(60deg) translate(40px) scale(0.8);
+      animation-delay: 0.1s;
+    }
+
+    .dot:nth-child(3) {
+      transform: rotate(120deg) translate(40px) scale(0.8);
+      animation-delay: 0.2s;
+    }
+
+    .dot:nth-child(4) {
+      transform: rotate(180deg) translate(40px) scale(0.8);
+      animation-delay: 0.3s;
+    }
+
+    .dot:nth-child(5) {
+      transform: rotate(240deg) translate(40px) scale(0.8);
+      animation-delay: 0.4s;
+    }
+
+    .dot:nth-child(6) {
+      transform: rotate(300deg) translate(40px) scale(0.8);
+      animation-delay: 0.5s;
+    }
+
+    /* Rotation animation */
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg) translate(40px) scale(1);
+      }
+      100% {
+        transform: rotate(360deg) translate(40px) scale(1);
+      }
+    }
+
+    /* Scaling pulse animation */
+    @keyframes scalePulse {
+      0%, 100% {
+        transform: scale(0.8);
+        opacity: 0.8;
+      }
+      50% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="loader-container">
+    <div class="loader">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+</body>
+</html>

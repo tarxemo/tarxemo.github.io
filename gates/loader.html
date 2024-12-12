@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Loader Animation</title>
+    <style>
+        /* Styling the loader mycontainer */
+        .mycontainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            /* Optional for visualization */
+        }
+
+        .loader-mycontainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 250px;
+            /* Fixed size for the loader */
+            height: 250px;
+            background-color: transparent;
+            align-items: center;
+
+        }
+
+        /* Styling each my-ring */
+        .my-ring {
+            position: absolute;
+            border: 4px solid #FFE31A;
+            border-radius: 50%;
+            opacity: 0;
+            animation: pulse 1.5s infinite cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        /* Individual my-ring sizes and animation delays */
+        .my-ring:nth-child(1) {
+            width: 10%;
+            height: 10%;
+            animation-delay: 0s;
+        }
+
+        .my-ring:nth-child(2) {
+            width: 20%;
+            height: 20%;
+            animation-delay: 0.3s;
+        }
+
+        .my-ring:nth-child(3) {
+            width: 30%;
+            height: 30%;
+            animation-delay: 0.6s;
+        }
+
+        .my-ring:nth-child(4) {
+            width: 40%;
+            height: 40%;
+            animation-delay: 0.9s;
+        }
+
+        .my-ring:nth-child(5) {
+            width: 50%;
+            height: 50%;
+            animation-delay: 1.2s;
+        }
+
+        .my-ring:nth-child(6) {
+            width: 60%;
+            height: 60%;
+            animation-delay: 1.5s;
+        }
+
+        .my-ring:nth-child(7) {
+            width: 70%;
+            height: 70%;
+            animation-delay: 1.8s;
+        }
+
+        /* Pulse Animation */
+        @keyframes pulse {
+            0% {
+                transform: scale(0.9);
+                opacity: 0.5;
+                border-color: #FFE31A;
+            }
+
+            50% {
+                transform: scale(1);
+                opacity: 1;
+                border-color: #FFE31A;
+            }
+
+            100% {
+                transform: scale(1.1);
+                opacity: 0.5;
+                border-color: #FFE31A;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mycontainer">
+        <div class="loader-mycontainer">
+            <div class="my-ring"></div>
+            <div class="my-ring"></div>
+            <div class="my-ring"></div>
+            <div class="my-ring"></div>
+            <div class="my-ring"></div>
+            <div class="my-ring"></div>
+            <div class="my-ring"></div>
+        </div>
+    </div>
+</body>
+
+</html>
