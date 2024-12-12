@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+          }
+          
+          #image-container {
+            display: grid;
+            grid-template-columns: repeat(10, 50px); /* Adjust based on number of rows and columns */
+            grid-template-rows: repeat(10, 50px);
+            width: 500px;
+            height: 500px;
+            position: relative;
+          }
+          
+          .image-piece {
+            width: 50px;
+            height: 50px;
+            background-image: url('./images/adm-student.jpg'); /* Replace with your image */
+            background-size: 500px 500px; /* Full image size */
+            opacity: 0;
+            animation: assemble 2s ease forwards;
+          }
+          
+          @keyframes assemble {
+            0% {
+              transform: scale(0);
+              opacity: 0;
+            }
+            100% {
+              transform: scale(1);
+              opacity: 1;
+            }
+          }
+          
+    </style>
+</head>
+<body>
+    <div id="image-container">
+        <!-- Image pieces will be generated dynamically -->
+      </div>
+
+    <div id="image-container">
+        <!-- Image pieces will be generated dynamically -->
+      </div>
+      <script>
+        const container = document.getElementById('image-container');
+const rows = 10; // Number of rows
+const cols = 10; // Number of columns
+const pieceSize = 50; // Size of each piece
+
+for (let row = 0; row < rows; row++) {
+  for (let col = 0; col < cols; col++) {
+    const piece = document.createElement('div');
+    piece.classList.add('image-piece');
+    piece.style.backgroundPosition = `-${col * pieceSize}px -${row * pieceSize}px`;
+    piece.style.animationDelay = `${(row * cols + col) * 0.005}s`; // Staggered animation
+    container.appendChild(piece);
+  }
+}
+
+      </script>
+</body>
+</html>

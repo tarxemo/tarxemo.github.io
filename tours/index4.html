@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Improved Carousel</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    .carousel {
+      position: relative;
+      width: 80%;
+      max-width: 1200px;
+      height: 500px;
+      overflow: hidden;
+      background-color: #ddd;
+    }
+
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    /* Navigation Buttons */
+    .nav-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 1.5rem;
+      z-index: 10;
+    }
+
+    .nav-button:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    #prev {
+      left: 10px;
+    }
+
+    #next {
+      right: 10px;
+    }
+
+    /* Slide Indicators */
+    .indicators {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+    }
+
+    .indicator {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+    }
+
+    .indicator.active {
+      background-color: white;
+    }
+
+    /* Horizontal Panels Style */
+    .panel {
+      position: absolute;
+      width: 100%;
+      height: 20%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transform: translateX(-100%);
+      animation: slideIn 1.5s ease forwards;
+    }
+
+    @keyframes slideIn {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    /* Grid Assembly Style */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      grid-template-rows: repeat(10, 1fr);
+      width: 100%;
+      height: 100%;
+    }
+
+    .grid-piece {
+      background-size: 1000%;
+      background-repeat: no-repeat;
+      opacity: 0;
+      animation: assemble 2s ease forwards;
+    }
+
+    @keyframes assemble {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="carousel">
+    <!-- Slides -->
+    <div class="slide active" data-effect="horizontal-panels" data-image="./images/administration-block-2.jpg"></div>
+    <div class="slide" data-effect="grid-assembly" data-image="./images/adm-student.jpg"></div>
+    <div class="slide" data-effect="horizontal-panels" data-image="./images/sample.jpg"></div>
+
+    <!-- Navigation Buttons -->
+    <button class="nav-button" id="prev"><i class="fas fa-chevron-left"></i></button>
+    <button class="nav-button" id="next"><i class="fas fa-chevron-right"></i></button>
+
+    <!-- Slide Indicators -->
+    <div class="indicators">
+      <div class="indicator active"></div>
+      <div class="indicator"></div>
+      <div class="indicator"></div>
+    </div>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const indicators = document.querySelectorAll('.indicator');
+    let currentSlide = 0;
+
+
+// Function to create horizontal panels
+function createHorizontalPanels(slide, image) {
+    slide.innerHTML = ''; // Clear previous content
+    const numPanels = 5; // Number of horizontal panels
+    const panelHeight = 100 / numPanels; // Height of each panel as a percentage of the container
+  
+    for (let i = 0; i < numPanels; i++) {
+      const panel = document.createElement('div');
+      panel.classList.add('panel');
+      panel.style.backgroundImage = `url(${image})`;
+      panel.style.backgroundSize = `100% ${numPanels * 100}%`; // Ensure the image spans all panels
+      panel.style.backgroundPosition = `0 ${-i * panelHeight}%`; // Adjust the vertical slice
+      panel.style.position = 'absolute';
+      panel.style.top = `${i * panelHeight}%`;
+      panel.style.height = `${panelHeight}%`;
+      panel.style.width = '100%';
+      slide.appendChild(panel);
+    }
+  }
+  
+  // Function to create grid pieces
+  function createGridPieces(slide, image) {
+    slide.innerHTML = ''; // Clear previous content
+    const gridContainer = document.createElement('div');
+    gridContainer.classList.add('grid-container');
+  
+    const rows = 10;
+    const cols = 10;
+    const pieceWidth = 100 / cols; // Width of each grid piece
+    const pieceHeight = 100 / rows; // Height of each grid piece
+  
+    for (let row = 0; row < rows; row++) {
+      for (let col = 0; col < cols; col++) {
+        const piece = document.createElement('div');
+        piece.classList.add('grid-piece');
+        piece.style.backgroundImage = `url(${image})`;
+        piece.style.backgroundSize = `${cols * 100}% ${rows * 100}%`; // Ensure the entire image is covered
+        piece.style.backgroundPosition = `${-col * pieceWidth}% ${-row * pieceHeight}%`; // Slice the image
+        piece.style.width = `${pieceWidth}%`;
+        piece.style.height = `${pieceHeight}%`;
+        piece.style.animationDelay = `${(row * cols + col) * 0.01}s`;
+        gridContainer.appendChild(piece);
+      }
+    }
+  
+    slide.appendChild(gridContainer);
+  }
+  
+  
+    // Initialize slide effect
+    function initializeSlide(slide) {
+      const effect = slide.getAttribute('data-effect');
+      const image = slide.getAttribute('data-image');
+
+      if (effect === 'horizontal-panels') {
+        createHorizontalPanels(slide, image);
+      } else if (effect === 'grid-assembly') {
+        createGridPieces(slide, image);
+      }
+    }
+
+    // Show slide
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+          slide.classList.add('active');
+          initializeSlide(slide);
+        }
+      });
+
+      indicators.forEach((indicator, i) => {
+        indicator.classList.toggle('active', i === index);
+      });
+    }
+
+    // Next/Previous Controls
+    document.getElementById('next').addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    });
+
+    document.getElementById('prev').addEventListener('click', () => {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    });
+
+    // Indicator Controls
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => {
+        currentSlide = index;
+        showSlide(currentSlide);
+      });
+    });
+
+      // Responsivity Handling
+  window.addEventListener('resize', () => {
+    initializeSlide(slides[currentSlide]); // Reinitialize the current slide
+  });
+    // Initialize the first slide
+    initializeSlide(slides[currentSlide]);
+  </script>
+</body>
+</html>

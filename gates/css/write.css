@@ -1,0 +1,23 @@
+.text-animation {
+    display: inline-block;
+    opacity: 1; /* Ensure the text is visible */
+    overflow: hidden; /* Hide text until animation plays */
+    white-space: nowrap; /* Prevent line breaks in the text */
+  }
+  
+  .text-animation span {
+    display: inline-block;
+    opacity: 0; /* Start with each letter invisible */
+    animation: writeText 4s steps(40) forwards; /* Typing effect */
+  }
+  
+  @keyframes writeText {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  

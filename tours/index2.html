@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reusable Sliding Panels</title>
+    <link rel="stylesheet" href="./slide/slide.css">
+</head>
+<body>
+    <!-- <div id="image-container" class="image-container">
+    </div> -->
+
+    <div id="image-container1" style=" height:100vh; width: 100vw; " class="image-container">
+        <!-- Panels will be dynamically generated -->
+    </div>
+    <script src="./slide/slide.js"></script>
+    <script>
+        createSlidingPanels(
+            'image-container1',
+            './images/class-rooms.jpg',
+            1000, // Number of panels
+            0.001 // Animation delay step
+        );
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reusable Sliding Panels</title>
+    <link rel="stylesheet" href="./grid/styles.css">
+</head>
+<body>
+    <div id="image-container" class="image-container">
+        <!-- Image pieces will be dynamically generated -->
+    </div>
+
+    <script src="./grid/script.js"></script>
+    <script>
+        // Call the function to initialize the image grid
+        createImageGrid(
+            'image-container',                // Container ID
+            './images/adm-student.jpg',       // Image URL
+            50,                               // Piece size (in pixels)
+            10,                               // Number of rows
+            10                                // Number of columns
+        );
+    </script>
+</body>
+</html>

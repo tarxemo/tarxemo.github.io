@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #20232a;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    width: inherit;
+    overflow: hidden;
+}
+
+.panel {
+    position: absolute;
+    width: 100%;
+    height: 20%; /* Adjust based on the number of panels */
+    background-size: 500px 500px; /* Full image size */
+    transform: translateX(-100%); /* Initial position (hidden to the left) */
+    animation: slideIn 1.5s ease forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
