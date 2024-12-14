@@ -480,7 +480,25 @@
       duration: 2,
     });
   </script>
-
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize Swiper
+      const swiper = new Swiper('.swiper-container', {
+        loop: true,           // Enable looping of slides
+        slidesPerView: 1,     // Number of slides visible at once
+        spaceBetween: 10,     // Space between slides
+        navigation: {
+          nextEl: '.swiper-button-next', // Next button
+          prevEl: '.swiper-button-prev', // Previous button
+        },
+        autoplay: {
+          delay: 3000,         // Time between each slide (in ms)
+          disableOnInteraction: false, // Keep autoplaying after user interacts
+        },
+      });
+    });
+  </script>
+  
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
