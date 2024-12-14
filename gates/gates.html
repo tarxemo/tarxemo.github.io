@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="./css/styles.css">
   <script src="./js/footerNav.js"></script>
   <script src="./js/mibileNavigation.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/rellax@1.12.1/rellax.min.js"></script>
+
   <style>
     .parallax {
       background-image: url('./images/beach1-lg.jpg');
@@ -22,9 +24,14 @@
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-position: center;
-      height: 100vh;
+      min-height: 100vh;
     }
-
+    .highlights{
+      background-image: url('./images/plane-lg.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      min-height: 100vh;
+    }
     #my-main-content {
       display: none;
     }
@@ -215,7 +222,7 @@
 
 
     <!-- Parallax Section -->
-    <section id="parallax-section" class="parallax h-screen flex items-center justify-center">
+    <section id="parallax-section" class="parallax flex items-center justify-center">
       <div class="container mx-auto px-6 md:px-12 text-white text-center">
         <!-- Contact Information Section -->
         <div class="text-justify mb-16">
@@ -273,32 +280,149 @@
 
 
 
-    <!-- Highlights Section -->
-    <section class="bg-[#f3f4f6] py-16">
+    <section class="py-20 bg-gradient-to-r from-[#F5F5F5] to-[#D9E9E5]" id="testimonials">
+      <div class="container mx-auto px-6 sm:px-2 md:px-12">
+        <h2 class="text-3xl font-semibold text-center text-[#0D7C66] mb-10">What Our Guests Are Saying</h2>
+        <p class="text-xl text-center text-gray-700 mb-16">
+          Hear firsthand experiences from those who’ve explored Zanzibar with us.
+        </p>
+    
+        <!-- Testimonial Slider -->
+        <div class="slick-carousel">
+          <div class="testimonial-card bg-white p-6 sm:p-2 m-6 sm:m-2 rounded-lg shadow-lg text-center" data-aos="fade-up" data-aos-duration="1000">
+            <i class="fas fa-quote-left text-[#FFE31A] text-4xl mb-4"></i>
+            <p class="text-lg text-gray-600 mb-4">
+              "An unforgettable experience! The Zanzibar safari was the highlight of our trip. We saw incredible wildlife and learned so much about the culture."
+            </p>
+            <p class="font-semibold text-[#0D7C66]">Anna & Mark</p>
+            <div class="flex justify-center mt-2">
+              <span class="text-yellow-400 text-xl">★★★★★</span>
+            </div>
+          </div>
+    
+          <div class="testimonial-card bg-white p-6 sm:p-2 m-6 sm:m-2 rounded-lg shadow-lg text-center" data-aos="fade-up" data-aos-duration="1000">
+            <i class="fas fa-quote-left text-[#FFE31A] text-4xl mb-4"></i>
+            <p class="text-lg text-gray-600 mb-4">
+              "The team at Gates of Zanzibar Safaris made our honeymoon extra special. From the personalized itinerary to the amazing sights, everything was perfect."
+            </p>
+            <p class="font-semibold text-[#0D7C66]">John & Claire</p>
+            <div class="flex justify-center mt-2">
+              <span class="text-yellow-400 text-xl">★★★★★</span>
+            </div>
+          </div>
+    
+          <!-- Add more testimonial cards as needed -->
+        </div>
+    
+      </div>
+    </section>
+    
+
+
+<!-- Highlights Section -->
+<section class="bg-[#f3f4f6] py-16 relative highlights">
+  <!-- Parallax Background Image -->  
+  <div class="container mx-auto px-6 md:px-12 relative z-10">
+    <h2 class="text-3xl font-semibold text-center text-[#0D7C66] mb-10">Highlights</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Highlight Card 1 -->
+      <div class="bg-white p-6 rounded-full shadow-lg text-center">
+        <img src="./images/testmon1.jpg" alt="Highlight 1" class="rounded-full mb-4 mx-auto w-32 h-32 object-cover">
+        <h3 class="text-xl font-semibold text-[#0D7C66] mb-2">Exotic Beaches</h3>
+        <p class="text-sm text-gray-600">Explore pristine shores and crystal-clear waters for a perfect getaway.</p>
+      </div>
+      <!-- Highlight Card 2 -->
+      <div class="bg-white p-6 rounded-full shadow-lg text-center">
+        <img src="./images/testmon2.jpg" alt="Highlight 2" class="rounded-full mb-4 mx-auto w-32 h-32 object-cover">
+        <h3 class="text-xl font-semibold text-[#0D7C66] mb-2">Cultural Heritage</h3>
+        <p class="text-sm text-gray-600">Immerse yourself in rich traditions and vibrant history.</p>
+      </div>
+      <!-- Highlight Card 3 -->
+      <div class="bg-white p-6 rounded-full shadow-lg text-center">
+        <img src="./images/testmon3.jpg" alt="Highlight 3" class="rounded-full mb-4 mx-auto w-32 h-32 object-cover">
+        <h3 class="text-xl font-semibold text-[#0D7C66] mb-2">Adventure Trails</h3>
+        <p class="text-sm text-gray-600">Discover thrilling experiences in scenic landscapes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Initialize Rellax.js -->
+<script src="https://cdn.jsdelivr.net/npm/rellax@1.12.1/rellax.min.js"></script>
+<script>
+  // Initialize Rellax for parallax effect
+  var rellax = new Rellax('.rellax');
+</script>
+
+
+
+
+
+    <section class="py-20 bg-white" id="safari-packages">
       <div class="container mx-auto px-6 md:px-12">
-        <h2 class="text-3xl font-semibold text-center text-[#0D7C66] mb-10">Highlights</h2>
+        <h2 class="text-3xl font-semibold text-center text-[#0D7C66] mb-10">Explore Our Featured Safari Packages</h2>
+        <p class="text-lg text-center text-gray-700 mb-16">
+          Tailored safari experiences designed to connect you with Zanzibar’s breathtaking wildlife and landscapes.
+        </p>
+    
+        <!-- Safari Package Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Highlight Card 1 -->
-          <div class="bg-white p-6 rounded-full shadow-lg text-center">
-            <img src="./images/testmon1.jpg" alt="Highlight 1" class="rounded-full mb-4 mx-auto w-32 h-32 object-cover">
-            <h3 class="text-xl font-semibold text-[#0D7C66] mb-2">Exotic Beaches</h3>
-            <p class="text-sm text-gray-600">Explore pristine shores and crystal-clear waters for a perfect getaway.</p>
+    
+          <!-- Safari Package Card 1 -->
+          <div class="card bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <img src="./images/safari-package1.jpg" alt="3-Day Wildlife Safari" class="w-full rounded-lg mb-4">
+            <h3 class="text-xl font-semibold text-[#0D7C66] mb-2">3-Day Wildlife Safari</h3>
+            <p class="text-gray-600 mb-4">Immerse yourself in the wildlife of Zanzibar with a safari that takes you deep into nature.</p>
+            <div class="flex items-center text-gray-600">
+              <i class="fas fa-paw mr-2 text-[#FFE31A]"></i><span>Wildlife Viewing</span>
+            </div>
+            <div class="flex items-center text-gray-600 mt-2">
+              <i class="fas fa-sun mr-2 text-[#FFE31A]"></i><span>Beach Relaxation</span>
+            </div>
+            <a href="/safari-details/3-day-wildlife" class="inline-block mt-4 bg-[#FFE31A] text-[#0D7C66] py-2 px-6 rounded-full text-lg font-semibold hover:bg-[#0D7C66] hover:text-white transition-colors duration-300">
+              Learn More
+            </a>
           </div>
-          <!-- Highlight Card 2 -->
-          <div class="bg-white p-6 rounded-full shadow-lg text-center">
-            <img src="./images/testmon2.jpg" alt="Highlight 2" class="rounded-full mb-4 mx-auto w-32 h-32 object-cover">
-            <h3 class="text-xl font-semibold text-[#0D7C66] mb-2">Cultural Heritage</h3>
-            <p class="text-sm text-gray-600">Immerse yourself in rich traditions and vibrant history.</p>
+    
+          <!-- Safari Package Card 2 -->
+          <div class="card bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <img src="./images/safari-package2.jpg" alt="Cultural Safari Experience" class="w-full rounded-lg mb-4">
+            <h3 class="text-xl font-semibold text-[#0D7C66] mb-2">Cultural Safari Experience</h3>
+            <p class="text-gray-600 mb-4">Discover the rich culture of Zanzibar while exploring the island’s natural beauty.</p>
+            <div class="flex items-center text-gray-600">
+              <i class="fas fa-people-carry mr-2 text-[#FFE31A]"></i><span>Cultural Immersion</span>
+            </div>
+            <div class="flex items-center text-gray-600 mt-2">
+              <i class="fas fa-hiking mr-2 text-[#FFE31A]"></i><span>Adventure Trails</span>
+            </div>
+            <a href="/safari-details/cultural-safari" class="inline-block mt-4 bg-[#FFE31A] text-[#0D7C66] py-2 px-6 rounded-full text-lg font-semibold hover:bg-[#0D7C66] hover:text-white transition-colors duration-300">
+              Learn More
+            </a>
           </div>
-          <!-- Highlight Card 3 -->
-          <div class="bg-white p-6 rounded-full shadow-lg text-center">
-            <img src="./images/testmon3.jpg" alt="Highlight 3" class="rounded-full mb-4 mx-auto w-32 h-32 object-cover">
-            <h3 class="text-xl font-semibold text-[#0D7C66] mb-2">Adventure Trails</h3>
-            <p class="text-sm text-gray-600">Discover thrilling experiences in scenic landscapes.</p>
+    
+          <!-- Safari Package Card 3 -->
+          <div class="card bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <img src="./images/safari-package3.jpg" alt="Family Safari Adventure" class="w-full rounded-lg mb-4">
+            <h3 class="text-xl font-semibold text-[#0D7C66] mb-2">Family Safari Adventure</h3>
+            <p class="text-gray-600 mb-4">A family-friendly safari designed for creating unforgettable memories together.</p>
+            <div class="flex items-center text-gray-600">
+              <i class="fas fa-users mr-2 text-[#FFE31A]"></i><span>Family-Friendly</span>
+            </div>
+            <div class="flex items-center text-gray-600 mt-2">
+              <i class="fas fa-sun mr-2 text-[#FFE31A]"></i><span>Beach Relaxation</span>
+            </div>
+            <a href="/safari-details/family-safari" class="inline-block mt-4 bg-[#FFE31A] text-[#0D7C66] py-2 px-6 rounded-full text-lg font-semibold hover:bg-[#0D7C66] hover:text-white transition-colors duration-300">
+              Learn More
+            </a>
           </div>
+    
         </div>
       </div>
     </section>
+    
+
+
+
 
     <div id="footer"></div>
 
