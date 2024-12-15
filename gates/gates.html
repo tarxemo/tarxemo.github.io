@@ -39,6 +39,20 @@
       border-top-left-radius: 32px;
       border-bottom-right-radius: 32px;
     }
+    
+    .hotel-image {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 50%;
+  }
+
+  @media (max-width: 768px) {
+      .hotel-image {
+          width: 220px;
+          height: 220px;
+      }
+  }
   </style>
 </head>
 
@@ -223,6 +237,42 @@
 
       </div>
     </section>
+
+
+
+    <!-- Hotels Section -->
+    <section class="hotels-section py-10">
+      <h2 class="text-3xl font-semibold text-center mb-8">Our Hotels</h2>
+  
+      <div class="relative">
+          <div class="swiper-container">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide text-center">
+                      <img src="./images/beach-md.jpg" alt="Hotel 1" class="hotel-image mx-auto">
+                      <p class="mt-4 text-3xl">Hotel Paradise</p>
+                  </div>
+                  <div class="swiper-slide text-center">
+                      <img src="./images/beach1-lg.jpg" alt="Hotel 2" class="hotel-image mx-auto">
+                      <p class="mt-4 text-3xl">Ocean View</p>
+                  </div>
+                  <div class="swiper-slide text-center">
+                      <img src="./images/ocean-md.jpg" alt="Hotel 3" class="hotel-image mx-auto">
+                      <p class="mt-4 text-3xl">Mountain Retreat</p>
+                  </div>
+                  <div class="swiper-slide text-center">
+                      <img src="./images/plane-lg.jpg" alt="Hotel 4" class="hotel-image mx-auto">
+                      <p class="mt-4 text-3xl">Urban Oasis</p>
+                  </div>
+              </div>
+              <!-- Pagination -->
+          <div class="swiper-pagination mt-32 pt-32"></div>
+          </div>
+          <!-- Navigation buttons -->
+          <div class="swiper-button-next absolute top-1/2 -translate-y-1/2 right-0 z-10"></div>
+          <div class="swiper-button-prev absolute top-1/2 -translate-y-1/2 left-0 z-10"></div>
+      </div>
+  </section>
+
 
 
     <!-- Parallax Section -->

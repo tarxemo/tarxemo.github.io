@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels | Tourist Company</title>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./css/aos.css" rel="stylesheet">
+    <link href="./css/animate.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/footerNav.js"></script>
+    <script src="./js/mibileNavigation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/rellax@1.12.1/rellax.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #007BFF;
+            --secondary-color: #6C757D;
+            --background-color: #F8F9FA;
+            --text-color: #343A40;
+        }
+
+        .hotel-image {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        @media (max-width: 768px) {
+            .hotel-image {
+                width: 220px;
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div id="top-nav"></div>
+
+    <!-- Hero Section -->
+    <div class="hero h-[75vh] flex flex-col justify-center items-center bg-cover bg-center text-white text-center" style="background-image: url('./images/beach1-lg.jpg');">
+        <h1 class="text-5xl font-bold">Discover Our Hotels</h1>
+        <p class="text-2xl mt-4">Experience luxury and comfort in the most beautiful destinations.</p>
+    </div>
+
+    <!-- Hotels Section -->
+    <section class="hotels-section py-10">
+        <h2 class="text-3xl font-semibold text-center mb-8">Our Hotels</h2>
+    
+        <div class="relative">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide text-center">
+                        <img src="./images/beach-md.jpg" alt="Hotel 1" class="hotel-image mx-auto">
+                        <p class="mt-4 text-3xl">Hotel Paradise</p>
+                    </div>
+                    <div class="swiper-slide text-center">
+                        <img src="./images/beach1-lg.jpg" alt="Hotel 2" class="hotel-image mx-auto">
+                        <p class="mt-4 text-3xl">Ocean View</p>
+                    </div>
+                    <div class="swiper-slide text-center">
+                        <img src="./images/ocean-md.jpg" alt="Hotel 3" class="hotel-image mx-auto">
+                        <p class="mt-4 text-3xl">Mountain Retreat</p>
+                    </div>
+                    <div class="swiper-slide text-center">
+                        <img src="./images/plane-lg.jpg" alt="Hotel 4" class="hotel-image mx-auto">
+                        <p class="mt-4 text-3xl">Urban Oasis</p>
+                    </div>
+                </div>
+                <!-- Pagination -->
+            <div class="swiper-pagination mt-32 pt-32"></div>
+            </div>
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next absolute top-1/2 -translate-y-1/2 right-0 z-10"></div>
+            <div class="swiper-button-prev absolute top-1/2 -translate-y-1/2 left-0 z-10"></div>
+        </div>
+    </section>
+    
+    <div id="footer"></div>
+
+
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 40,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="./js/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  
+    <script>
+      // Initialize AOS (Animate on Scroll)
+      AOS.init({
+        duration: 1800,
+      });
+  
+      // Locomotive Scroll Initialization
+      const scroll = new LocomotiveScroll({
+        el: document.querySelector('body'),
+        smooth: true
+      });
+  
+      // Floating shapes animation with GSAP
+      gsap.to('.floating-icon', {
+        y: -20,
+        repeat: -1,
+        yoyo: true,
+        ease: "power1.inOut",
+        duration: 2,
+      });
+    </script>
+</body>
+</html>
